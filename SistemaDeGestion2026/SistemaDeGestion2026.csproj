@@ -33,7 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -97,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\banner_proyecto_ropa_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaRN\CapaRN.csproj">
+      <Project>{79c6b7bf-ccdb-4e46-b6f2-fba5a4e23fb3}</Project>
+      <Name>CapaRN</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

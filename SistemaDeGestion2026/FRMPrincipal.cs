@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SistemaDeGestion2026
 {
-    public partial class FRMPrincipal : Form
+    public partial class FRMPrincipal : DevComponents.DotNetBar.Office2007RibbonForm
     {
         public FRMPrincipal()
         {
