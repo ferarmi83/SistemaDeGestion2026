@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Schedule, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -48,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FRMPersona_Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMPersona_Lista.Designer.cs">
+      <DependentUpon>FRMPersona_Lista.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRMPersona_Registrar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FRMPersona_Lista.resx">
+      <DependentUpon>FRMPersona_Lista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRMPersona_Registrar.resx">
       <DependentUpon>FRMPersona_Registrar.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +124,36 @@
       <Project>{79c6b7bf-ccdb-4e46-b6f2-fba5a4e23fb3}</Project>
       <Name>CapaRN</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_persona_nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_persona_modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_persona_reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_camara_tomar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_camara_Limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_camara_abrir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
