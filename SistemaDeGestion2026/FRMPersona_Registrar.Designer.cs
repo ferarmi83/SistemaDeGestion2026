@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             this.GPPanelPrincipal = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.SWBEstado = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.SWBSexo = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.DTINacimiento = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.TXTApellidoMaterno = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.TXTNombres = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.TXTCelular = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.TXTCorreoElectronico = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.TXTDireccion = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.TXTApellidoPaterno = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.TXTCI = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.GPFotografia = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.PCBFotografia = new System.Windows.Forms.PictureBox();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
@@ -48,11 +38,21 @@
             this.BTNSalir = new DevComponents.DotNetBar.ButtonX();
             this.BTNLimpiar = new DevComponents.DotNetBar.ButtonX();
             this.BTNGrabar = new DevComponents.DotNetBar.ButtonX();
+            this.TXTCI = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TXTApellidoPaterno = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TXTDireccion = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TXTCorreoElectronico = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TXTCelular = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TXTNombres = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TXTApellidoMaterno = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.DTINacimiento = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.SWBSexo = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.SWBEstado = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.GPPanelPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DTINacimiento)).BeginInit();
             this.GPFotografia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PCBFotografia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PCBCamara)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DTINacimiento)).BeginInit();
             this.SuspendLayout();
             // 
             // GPPanelPrincipal
@@ -110,45 +110,287 @@
             this.GPPanelPrincipal.TabIndex = 0;
             this.GPPanelPrincipal.Text = "Persona";
             // 
-            // SWBEstado
+            // GPFotografia
+            // 
+            this.GPFotografia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            this.GPFotografia.CanvasColor = System.Drawing.SystemColors.Control;
+            this.GPFotografia.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.GPFotografia.Controls.Add(this.PCBFotografia);
+            this.GPFotografia.Controls.Add(this.buttonX2);
+            this.GPFotografia.Controls.Add(this.buttonX1);
+            this.GPFotografia.Controls.Add(this.BTNCapturar);
+            this.GPFotografia.Controls.Add(this.PCBCamara);
+            this.GPFotografia.DisabledBackColor = System.Drawing.Color.Empty;
+            this.GPFotografia.Location = new System.Drawing.Point(328, 3);
+            this.GPFotografia.Name = "GPFotografia";
+            this.GPFotografia.Size = new System.Drawing.Size(361, 233);
             // 
             // 
             // 
-            // 
-            this.SWBEstado.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SWBEstado.Location = new System.Drawing.Point(9, 3);
-            this.SWBEstado.Name = "SWBEstado";
-            this.SWBEstado.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SWBEstado.OffText = "Inhabilitado";
-            this.SWBEstado.OffTextColor = System.Drawing.Color.White;
-            this.SWBEstado.OnBackColor = System.Drawing.Color.LimeGreen;
-            this.SWBEstado.OnText = "Habilitado";
-            this.SWBEstado.OnTextColor = System.Drawing.Color.White;
-            this.SWBEstado.Size = new System.Drawing.Size(149, 26);
-            this.SWBEstado.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.SWBEstado.TabIndex = 0;
-            this.SWBEstado.Value = true;
-            this.SWBEstado.ValueObject = "Y";
-            // 
-            // SWBSexo
-            // 
-            // 
+            this.GPFotografia.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.GPFotografia.Style.BackColorGradientAngle = 90;
+            this.GPFotografia.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.GPFotografia.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.GPFotografia.Style.BorderBottomWidth = 1;
+            this.GPFotografia.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.GPFotografia.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.GPFotografia.Style.BorderLeftWidth = 1;
+            this.GPFotografia.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.GPFotografia.Style.BorderRightWidth = 1;
+            this.GPFotografia.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.GPFotografia.Style.BorderTopWidth = 1;
+            this.GPFotografia.Style.CornerDiameter = 4;
+            this.GPFotografia.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.GPFotografia.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.GPFotografia.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.GPFotografia.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
             // 
             // 
-            this.SWBSexo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SWBSexo.Location = new System.Drawing.Point(164, 3);
-            this.SWBSexo.Name = "SWBSexo";
-            this.SWBSexo.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SWBSexo.OffText = "Femenino";
-            this.SWBSexo.OffTextColor = System.Drawing.Color.White;
-            this.SWBSexo.OnBackColor = System.Drawing.Color.DodgerBlue;
-            this.SWBSexo.OnText = "Masculino";
-            this.SWBSexo.OnTextColor = System.Drawing.Color.White;
-            this.SWBSexo.Size = new System.Drawing.Size(149, 26);
-            this.SWBSexo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.SWBSexo.TabIndex = 1;
-            this.SWBSexo.Value = true;
-            this.SWBSexo.ValueObject = "Y";
+            // 
+            this.GPFotografia.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.GPFotografia.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.GPFotografia.TabIndex = 8;
+            this.GPFotografia.Text = "Fotografía";
+            // 
+            // PCBFotografia
+            // 
+            this.PCBFotografia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PCBFotografia.Location = new System.Drawing.Point(179, 8);
+            this.PCBFotografia.Name = "PCBFotografia";
+            this.PCBFotografia.Size = new System.Drawing.Size(170, 132);
+            this.PCBFotografia.TabIndex = 14;
+            this.PCBFotografia.TabStop = false;
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Image = global::SistemaDeGestion2026.Properties.Resources.ic_camara_abrir;
+            this.buttonX2.ImageFixedSize = new System.Drawing.Size(40, 40);
+            this.buttonX2.Location = new System.Drawing.Point(247, 146);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(102, 51);
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.TabIndex = 2;
+            this.buttonX2.Text = "&Abrir";
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Image = global::SistemaDeGestion2026.Properties.Resources.ic_camara_Limpiar;
+            this.buttonX1.ImageFixedSize = new System.Drawing.Size(40, 40);
+            this.buttonX1.Location = new System.Drawing.Point(128, 146);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(113, 51);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 1;
+            this.buttonX1.Text = "L&impiar";
+            // 
+            // BTNCapturar
+            // 
+            this.BTNCapturar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.BTNCapturar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.BTNCapturar.Image = global::SistemaDeGestion2026.Properties.Resources.ic_camara_tomar;
+            this.BTNCapturar.ImageFixedSize = new System.Drawing.Size(40, 40);
+            this.BTNCapturar.Location = new System.Drawing.Point(3, 146);
+            this.BTNCapturar.Name = "BTNCapturar";
+            this.BTNCapturar.Size = new System.Drawing.Size(119, 51);
+            this.BTNCapturar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.BTNCapturar.TabIndex = 0;
+            this.BTNCapturar.Text = "&Capturar";
+            // 
+            // PCBCamara
+            // 
+            this.PCBCamara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PCBCamara.Location = new System.Drawing.Point(3, 8);
+            this.PCBCamara.Name = "PCBCamara";
+            this.PCBCamara.Size = new System.Drawing.Size(170, 132);
+            this.PCBCamara.TabIndex = 0;
+            this.PCBCamara.TabStop = false;
+            // 
+            // BTNSalir
+            // 
+            this.BTNSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.BTNSalir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.BTNSalir.Image = global::SistemaDeGestion2026.Properties.Resources.ic_salir;
+            this.BTNSalir.ImageFixedSize = new System.Drawing.Size(40, 40);
+            this.BTNSalir.Location = new System.Drawing.Point(383, 242);
+            this.BTNSalir.Name = "BTNSalir";
+            this.BTNSalir.Size = new System.Drawing.Size(121, 51);
+            this.BTNSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.BTNSalir.TabIndex = 13;
+            this.BTNSalir.Text = "&Salir";
+            this.BTNSalir.Click += new System.EventHandler(this.BTNSalir_Click);
+            // 
+            // BTNLimpiar
+            // 
+            this.BTNLimpiar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.BTNLimpiar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.BTNLimpiar.Image = global::SistemaDeGestion2026.Properties.Resources.ic_limpiar;
+            this.BTNLimpiar.ImageFixedSize = new System.Drawing.Size(40, 40);
+            this.BTNLimpiar.Location = new System.Drawing.Point(256, 242);
+            this.BTNLimpiar.Name = "BTNLimpiar";
+            this.BTNLimpiar.Size = new System.Drawing.Size(121, 51);
+            this.BTNLimpiar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.BTNLimpiar.TabIndex = 12;
+            this.BTNLimpiar.Text = "&Limpiar";
+            // 
+            // BTNGrabar
+            // 
+            this.BTNGrabar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.BTNGrabar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.BTNGrabar.Image = global::SistemaDeGestion2026.Properties.Resources.ic_guardar;
+            this.BTNGrabar.ImageFixedSize = new System.Drawing.Size(40, 40);
+            this.BTNGrabar.Location = new System.Drawing.Point(129, 242);
+            this.BTNGrabar.Name = "BTNGrabar";
+            this.BTNGrabar.Size = new System.Drawing.Size(121, 51);
+            this.BTNGrabar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.BTNGrabar.TabIndex = 11;
+            this.BTNGrabar.Text = "&Grabar";
+            this.BTNGrabar.Click += new System.EventHandler(this.BTNGrabar_Click);
+            // 
+            // TXTCI
+            // 
+            this.TXTCI.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.TXTCI.Border.Class = "TextBoxBorder";
+            this.TXTCI.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TXTCI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TXTCI.DisabledBackColor = System.Drawing.Color.White;
+            this.TXTCI.ForeColor = System.Drawing.Color.Black;
+            this.TXTCI.Location = new System.Drawing.Point(9, 35);
+            this.TXTCI.Name = "TXTCI";
+            this.TXTCI.PreventEnterBeep = true;
+            this.TXTCI.Size = new System.Drawing.Size(149, 26);
+            this.TXTCI.TabIndex = 0;
+            this.TXTCI.WatermarkText = "CI";
+            this.TXTCI.Enter += new System.EventHandler(this.TXTCI_Enter);
+            this.TXTCI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTCI_KeyDown);
+            // 
+            // TXTApellidoPaterno
+            // 
+            this.TXTApellidoPaterno.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.TXTApellidoPaterno.Border.Class = "TextBoxBorder";
+            this.TXTApellidoPaterno.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TXTApellidoPaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TXTApellidoPaterno.DisabledBackColor = System.Drawing.Color.White;
+            this.TXTApellidoPaterno.ForeColor = System.Drawing.Color.Black;
+            this.TXTApellidoPaterno.Location = new System.Drawing.Point(9, 67);
+            this.TXTApellidoPaterno.Name = "TXTApellidoPaterno";
+            this.TXTApellidoPaterno.PreventEnterBeep = true;
+            this.TXTApellidoPaterno.Size = new System.Drawing.Size(149, 26);
+            this.TXTApellidoPaterno.TabIndex = 2;
+            this.TXTApellidoPaterno.WatermarkText = "Apellido Paterno";
+            this.TXTApellidoPaterno.Enter += new System.EventHandler(this.TXTCI_Enter);
+            this.TXTApellidoPaterno.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTApellidoPaterno_KeyDown);
+            // 
+            // TXTDireccion
+            // 
+            this.TXTDireccion.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.TXTDireccion.Border.Class = "TextBoxBorder";
+            this.TXTDireccion.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TXTDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TXTDireccion.DisabledBackColor = System.Drawing.Color.White;
+            this.TXTDireccion.ForeColor = System.Drawing.Color.Black;
+            this.TXTDireccion.Location = new System.Drawing.Point(9, 163);
+            this.TXTDireccion.Multiline = true;
+            this.TXTDireccion.Name = "TXTDireccion";
+            this.TXTDireccion.PreventEnterBeep = true;
+            this.TXTDireccion.Size = new System.Drawing.Size(304, 73);
+            this.TXTDireccion.TabIndex = 7;
+            this.TXTDireccion.WatermarkText = "Dirección";
+            this.TXTDireccion.Enter += new System.EventHandler(this.TXTCI_Enter);
+            // 
+            // TXTCorreoElectronico
+            // 
+            this.TXTCorreoElectronico.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.TXTCorreoElectronico.Border.Class = "TextBoxBorder";
+            this.TXTCorreoElectronico.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TXTCorreoElectronico.DisabledBackColor = System.Drawing.Color.White;
+            this.TXTCorreoElectronico.ForeColor = System.Drawing.Color.Black;
+            this.TXTCorreoElectronico.Location = new System.Drawing.Point(98, 131);
+            this.TXTCorreoElectronico.Name = "TXTCorreoElectronico";
+            this.TXTCorreoElectronico.PreventEnterBeep = true;
+            this.TXTCorreoElectronico.Size = new System.Drawing.Size(215, 26);
+            this.TXTCorreoElectronico.TabIndex = 6;
+            this.TXTCorreoElectronico.WatermarkText = "Correo Electrónico";
+            this.TXTCorreoElectronico.Enter += new System.EventHandler(this.TXTCI_Enter);
+            this.TXTCorreoElectronico.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTCorreoElectronico_KeyDown);
+            // 
+            // TXTCelular
+            // 
+            this.TXTCelular.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.TXTCelular.Border.Class = "TextBoxBorder";
+            this.TXTCelular.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TXTCelular.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TXTCelular.DisabledBackColor = System.Drawing.Color.White;
+            this.TXTCelular.ForeColor = System.Drawing.Color.Black;
+            this.TXTCelular.Location = new System.Drawing.Point(10, 131);
+            this.TXTCelular.Name = "TXTCelular";
+            this.TXTCelular.PreventEnterBeep = true;
+            this.TXTCelular.Size = new System.Drawing.Size(82, 26);
+            this.TXTCelular.TabIndex = 5;
+            this.TXTCelular.WatermarkText = "Celular";
+            this.TXTCelular.Enter += new System.EventHandler(this.TXTCI_Enter);
+            this.TXTCelular.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTCelular_KeyDown);
+            // 
+            // TXTNombres
+            // 
+            this.TXTNombres.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.TXTNombres.Border.Class = "TextBoxBorder";
+            this.TXTNombres.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TXTNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TXTNombres.DisabledBackColor = System.Drawing.Color.White;
+            this.TXTNombres.ForeColor = System.Drawing.Color.Black;
+            this.TXTNombres.Location = new System.Drawing.Point(9, 99);
+            this.TXTNombres.Name = "TXTNombres";
+            this.TXTNombres.PreventEnterBeep = true;
+            this.TXTNombres.Size = new System.Drawing.Size(304, 26);
+            this.TXTNombres.TabIndex = 4;
+            this.TXTNombres.WatermarkText = "Nombres";
+            this.TXTNombres.Enter += new System.EventHandler(this.TXTCI_Enter);
+            this.TXTNombres.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTApellidoPaterno_KeyDown);
+            // 
+            // TXTApellidoMaterno
+            // 
+            this.TXTApellidoMaterno.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.TXTApellidoMaterno.Border.Class = "TextBoxBorder";
+            this.TXTApellidoMaterno.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TXTApellidoMaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TXTApellidoMaterno.DisabledBackColor = System.Drawing.Color.White;
+            this.TXTApellidoMaterno.ForeColor = System.Drawing.Color.Black;
+            this.TXTApellidoMaterno.Location = new System.Drawing.Point(164, 67);
+            this.TXTApellidoMaterno.Name = "TXTApellidoMaterno";
+            this.TXTApellidoMaterno.PreventEnterBeep = true;
+            this.TXTApellidoMaterno.Size = new System.Drawing.Size(149, 26);
+            this.TXTApellidoMaterno.TabIndex = 3;
+            this.TXTApellidoMaterno.WatermarkText = "Apellido Materno";
+            this.TXTApellidoMaterno.Enter += new System.EventHandler(this.TXTCI_Enter);
+            this.TXTApellidoMaterno.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTApellidoPaterno_KeyDown);
             // 
             // DTINacimiento
             // 
@@ -193,276 +435,48 @@
             this.DTINacimiento.Name = "DTINacimiento";
             this.DTINacimiento.Size = new System.Drawing.Size(149, 26);
             this.DTINacimiento.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.DTINacimiento.TabIndex = 2;
+            this.DTINacimiento.TabIndex = 1;
             this.DTINacimiento.WatermarkText = "Nacimiento";
             // 
-            // TXTApellidoMaterno
-            // 
-            this.TXTApellidoMaterno.BackColor = System.Drawing.Color.White;
+            // SWBSexo
             // 
             // 
             // 
-            this.TXTApellidoMaterno.Border.Class = "TextBoxBorder";
-            this.TXTApellidoMaterno.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TXTApellidoMaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TXTApellidoMaterno.DisabledBackColor = System.Drawing.Color.White;
-            this.TXTApellidoMaterno.ForeColor = System.Drawing.Color.Black;
-            this.TXTApellidoMaterno.Location = new System.Drawing.Point(164, 67);
-            this.TXTApellidoMaterno.Name = "TXTApellidoMaterno";
-            this.TXTApellidoMaterno.PreventEnterBeep = true;
-            this.TXTApellidoMaterno.Size = new System.Drawing.Size(149, 26);
-            this.TXTApellidoMaterno.TabIndex = 3;
-            this.TXTApellidoMaterno.WatermarkText = "Apellido Materno";
             // 
-            // TXTNombres
+            this.SWBSexo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SWBSexo.Location = new System.Drawing.Point(164, 3);
+            this.SWBSexo.Name = "SWBSexo";
+            this.SWBSexo.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.SWBSexo.OffText = "Femenino";
+            this.SWBSexo.OffTextColor = System.Drawing.Color.White;
+            this.SWBSexo.OnBackColor = System.Drawing.Color.DodgerBlue;
+            this.SWBSexo.OnText = "Masculino";
+            this.SWBSexo.OnTextColor = System.Drawing.Color.White;
+            this.SWBSexo.Size = new System.Drawing.Size(149, 26);
+            this.SWBSexo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SWBSexo.TabIndex = 10;
+            this.SWBSexo.Value = true;
+            this.SWBSexo.ValueObject = "Y";
             // 
-            this.TXTNombres.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.TXTNombres.Border.Class = "TextBoxBorder";
-            this.TXTNombres.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TXTNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TXTNombres.DisabledBackColor = System.Drawing.Color.White;
-            this.TXTNombres.ForeColor = System.Drawing.Color.Black;
-            this.TXTNombres.Location = new System.Drawing.Point(9, 99);
-            this.TXTNombres.Name = "TXTNombres";
-            this.TXTNombres.PreventEnterBeep = true;
-            this.TXTNombres.Size = new System.Drawing.Size(304, 26);
-            this.TXTNombres.TabIndex = 4;
-            this.TXTNombres.WatermarkText = "Nombres";
-            // 
-            // TXTCelular
-            // 
-            this.TXTCelular.BackColor = System.Drawing.Color.White;
+            // SWBEstado
             // 
             // 
             // 
-            this.TXTCelular.Border.Class = "TextBoxBorder";
-            this.TXTCelular.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TXTCelular.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TXTCelular.DisabledBackColor = System.Drawing.Color.White;
-            this.TXTCelular.ForeColor = System.Drawing.Color.Black;
-            this.TXTCelular.Location = new System.Drawing.Point(10, 131);
-            this.TXTCelular.Name = "TXTCelular";
-            this.TXTCelular.PreventEnterBeep = true;
-            this.TXTCelular.Size = new System.Drawing.Size(82, 26);
-            this.TXTCelular.TabIndex = 5;
-            this.TXTCelular.WatermarkText = "Celular";
             // 
-            // TXTCorreoElectronico
-            // 
-            this.TXTCorreoElectronico.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.TXTCorreoElectronico.Border.Class = "TextBoxBorder";
-            this.TXTCorreoElectronico.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TXTCorreoElectronico.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TXTCorreoElectronico.DisabledBackColor = System.Drawing.Color.White;
-            this.TXTCorreoElectronico.ForeColor = System.Drawing.Color.Black;
-            this.TXTCorreoElectronico.Location = new System.Drawing.Point(98, 131);
-            this.TXTCorreoElectronico.Name = "TXTCorreoElectronico";
-            this.TXTCorreoElectronico.PreventEnterBeep = true;
-            this.TXTCorreoElectronico.Size = new System.Drawing.Size(215, 26);
-            this.TXTCorreoElectronico.TabIndex = 6;
-            this.TXTCorreoElectronico.WatermarkText = "Correo Electrónico";
-            // 
-            // TXTDireccion
-            // 
-            this.TXTDireccion.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.TXTDireccion.Border.Class = "TextBoxBorder";
-            this.TXTDireccion.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TXTDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TXTDireccion.DisabledBackColor = System.Drawing.Color.White;
-            this.TXTDireccion.ForeColor = System.Drawing.Color.Black;
-            this.TXTDireccion.Location = new System.Drawing.Point(9, 163);
-            this.TXTDireccion.Multiline = true;
-            this.TXTDireccion.Name = "TXTDireccion";
-            this.TXTDireccion.PreventEnterBeep = true;
-            this.TXTDireccion.Size = new System.Drawing.Size(304, 73);
-            this.TXTDireccion.TabIndex = 7;
-            this.TXTDireccion.WatermarkText = "Dirección";
-            // 
-            // TXTApellidoPaterno
-            // 
-            this.TXTApellidoPaterno.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.TXTApellidoPaterno.Border.Class = "TextBoxBorder";
-            this.TXTApellidoPaterno.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TXTApellidoPaterno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TXTApellidoPaterno.DisabledBackColor = System.Drawing.Color.White;
-            this.TXTApellidoPaterno.ForeColor = System.Drawing.Color.Black;
-            this.TXTApellidoPaterno.Location = new System.Drawing.Point(9, 67);
-            this.TXTApellidoPaterno.Name = "TXTApellidoPaterno";
-            this.TXTApellidoPaterno.PreventEnterBeep = true;
-            this.TXTApellidoPaterno.Size = new System.Drawing.Size(149, 26);
-            this.TXTApellidoPaterno.TabIndex = 8;
-            this.TXTApellidoPaterno.WatermarkText = "Apellido Paterno";
-            // 
-            // TXTCI
-            // 
-            this.TXTCI.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.TXTCI.Border.Class = "TextBoxBorder";
-            this.TXTCI.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TXTCI.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TXTCI.DisabledBackColor = System.Drawing.Color.White;
-            this.TXTCI.ForeColor = System.Drawing.Color.Black;
-            this.TXTCI.Location = new System.Drawing.Point(9, 35);
-            this.TXTCI.Name = "TXTCI";
-            this.TXTCI.PreventEnterBeep = true;
-            this.TXTCI.Size = new System.Drawing.Size(149, 26);
-            this.TXTCI.TabIndex = 9;
-            this.TXTCI.WatermarkText = "CI";
-            // 
-            // GPFotografia
-            // 
-            this.GPFotografia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            this.GPFotografia.CanvasColor = System.Drawing.SystemColors.Control;
-            this.GPFotografia.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.GPFotografia.Controls.Add(this.PCBFotografia);
-            this.GPFotografia.Controls.Add(this.buttonX2);
-            this.GPFotografia.Controls.Add(this.buttonX1);
-            this.GPFotografia.Controls.Add(this.BTNCapturar);
-            this.GPFotografia.Controls.Add(this.PCBCamara);
-            this.GPFotografia.DisabledBackColor = System.Drawing.Color.Empty;
-            this.GPFotografia.Location = new System.Drawing.Point(328, 3);
-            this.GPFotografia.Name = "GPFotografia";
-            this.GPFotografia.Size = new System.Drawing.Size(361, 233);
-            // 
-            // 
-            // 
-            this.GPFotografia.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.GPFotografia.Style.BackColorGradientAngle = 90;
-            this.GPFotografia.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.GPFotografia.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.GPFotografia.Style.BorderBottomWidth = 1;
-            this.GPFotografia.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.GPFotografia.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.GPFotografia.Style.BorderLeftWidth = 1;
-            this.GPFotografia.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.GPFotografia.Style.BorderRightWidth = 1;
-            this.GPFotografia.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.GPFotografia.Style.BorderTopWidth = 1;
-            this.GPFotografia.Style.CornerDiameter = 4;
-            this.GPFotografia.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.GPFotografia.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.GPFotografia.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.GPFotografia.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.GPFotografia.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.GPFotografia.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.GPFotografia.TabIndex = 13;
-            this.GPFotografia.Text = "Fotografía";
-            // 
-            // PCBFotografia
-            // 
-            this.PCBFotografia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PCBFotografia.Location = new System.Drawing.Point(179, 8);
-            this.PCBFotografia.Name = "PCBFotografia";
-            this.PCBFotografia.Size = new System.Drawing.Size(170, 132);
-            this.PCBFotografia.TabIndex = 14;
-            this.PCBFotografia.TabStop = false;
-            // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Image = global::SistemaDeGestion2026.Properties.Resources.ic_camara_abrir;
-            this.buttonX2.ImageFixedSize = new System.Drawing.Size(40, 40);
-            this.buttonX2.Location = new System.Drawing.Point(247, 146);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(102, 51);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 13;
-            this.buttonX2.Text = "&Abrir";
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Image = global::SistemaDeGestion2026.Properties.Resources.ic_camara_Limpiar;
-            this.buttonX1.ImageFixedSize = new System.Drawing.Size(40, 40);
-            this.buttonX1.Location = new System.Drawing.Point(128, 146);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(113, 51);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 12;
-            this.buttonX1.Text = "L&impiar";
-            // 
-            // BTNCapturar
-            // 
-            this.BTNCapturar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.BTNCapturar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BTNCapturar.Image = global::SistemaDeGestion2026.Properties.Resources.ic_camara_tomar;
-            this.BTNCapturar.ImageFixedSize = new System.Drawing.Size(40, 40);
-            this.BTNCapturar.Location = new System.Drawing.Point(3, 146);
-            this.BTNCapturar.Name = "BTNCapturar";
-            this.BTNCapturar.Size = new System.Drawing.Size(119, 51);
-            this.BTNCapturar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.BTNCapturar.TabIndex = 11;
-            this.BTNCapturar.Text = "&Capturar";
-            // 
-            // PCBCamara
-            // 
-            this.PCBCamara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PCBCamara.Location = new System.Drawing.Point(3, 8);
-            this.PCBCamara.Name = "PCBCamara";
-            this.PCBCamara.Size = new System.Drawing.Size(170, 132);
-            this.PCBCamara.TabIndex = 0;
-            this.PCBCamara.TabStop = false;
-            // 
-            // BTNSalir
-            // 
-            this.BTNSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.BTNSalir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BTNSalir.Image = global::SistemaDeGestion2026.Properties.Resources.ic_salir;
-            this.BTNSalir.ImageFixedSize = new System.Drawing.Size(40, 40);
-            this.BTNSalir.Location = new System.Drawing.Point(383, 242);
-            this.BTNSalir.Name = "BTNSalir";
-            this.BTNSalir.Size = new System.Drawing.Size(121, 51);
-            this.BTNSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.BTNSalir.TabIndex = 12;
-            this.BTNSalir.Text = "&Salir";
-            // 
-            // BTNLimpiar
-            // 
-            this.BTNLimpiar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.BTNLimpiar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BTNLimpiar.Image = global::SistemaDeGestion2026.Properties.Resources.ic_limpiar;
-            this.BTNLimpiar.ImageFixedSize = new System.Drawing.Size(40, 40);
-            this.BTNLimpiar.Location = new System.Drawing.Point(256, 242);
-            this.BTNLimpiar.Name = "BTNLimpiar";
-            this.BTNLimpiar.Size = new System.Drawing.Size(121, 51);
-            this.BTNLimpiar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.BTNLimpiar.TabIndex = 11;
-            this.BTNLimpiar.Text = "&Limpiar";
-            // 
-            // BTNGrabar
-            // 
-            this.BTNGrabar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.BTNGrabar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.BTNGrabar.Image = global::SistemaDeGestion2026.Properties.Resources.ic_guardar;
-            this.BTNGrabar.ImageFixedSize = new System.Drawing.Size(40, 40);
-            this.BTNGrabar.Location = new System.Drawing.Point(129, 242);
-            this.BTNGrabar.Name = "BTNGrabar";
-            this.BTNGrabar.Size = new System.Drawing.Size(121, 51);
-            this.BTNGrabar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.BTNGrabar.TabIndex = 10;
-            this.BTNGrabar.Text = "&Grabar";
+            this.SWBEstado.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SWBEstado.Location = new System.Drawing.Point(9, 3);
+            this.SWBEstado.Name = "SWBEstado";
+            this.SWBEstado.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.SWBEstado.OffText = "Inhabilitado";
+            this.SWBEstado.OffTextColor = System.Drawing.Color.White;
+            this.SWBEstado.OnBackColor = System.Drawing.Color.LimeGreen;
+            this.SWBEstado.OnText = "Habilitado";
+            this.SWBEstado.OnTextColor = System.Drawing.Color.White;
+            this.SWBEstado.Size = new System.Drawing.Size(149, 26);
+            this.SWBEstado.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SWBEstado.TabIndex = 9;
+            this.SWBEstado.Value = true;
+            this.SWBEstado.ValueObject = "Y";
             // 
             // FRMPersona_Registrar
             // 
@@ -475,11 +489,13 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRMPersona_Registrar";
             this.Text = "FRMPersona_Registrar";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRMPersona_Registrar_FormClosing);
+            this.Load += new System.EventHandler(this.FRMPersona_Registrar_Load);
             this.GPPanelPrincipal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DTINacimiento)).EndInit();
             this.GPFotografia.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PCBFotografia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PCBCamara)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DTINacimiento)).EndInit();
             this.ResumeLayout(false);
 
         }
