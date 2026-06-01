@@ -48,6 +48,7 @@
             this.DTINacimiento = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.SWBSexo = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.SWBEstado = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.BLTAyuda = new DevComponents.DotNetBar.BalloonTip();
             this.GPPanelPrincipal.SuspendLayout();
             this.GPFotografia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PCBFotografia)).BeginInit();
@@ -216,6 +217,7 @@
             // 
             this.BTNSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.BTNSalir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.BTNSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BTNSalir.Image = global::SistemaDeGestion2026.Properties.Resources.ic_salir;
             this.BTNSalir.ImageFixedSize = new System.Drawing.Size(40, 40);
             this.BTNSalir.Location = new System.Drawing.Point(383, 242);
@@ -256,6 +258,8 @@
             // TXTCI
             // 
             this.TXTCI.BackColor = System.Drawing.Color.White;
+            this.BLTAyuda.SetBalloonCaption(this.TXTCI, "Ayuda");
+            this.BLTAyuda.SetBalloonText(this.TXTCI, "Número de documento de identidad de la persona");
             // 
             // 
             // 
@@ -276,6 +280,8 @@
             // TXTApellidoPaterno
             // 
             this.TXTApellidoPaterno.BackColor = System.Drawing.Color.White;
+            this.BLTAyuda.SetBalloonCaption(this.TXTApellidoPaterno, "Ayuda");
+            this.BLTAyuda.SetBalloonText(this.TXTApellidoPaterno, "Apellido Paterno de la persona");
             // 
             // 
             // 
@@ -296,6 +302,8 @@
             // TXTDireccion
             // 
             this.TXTDireccion.BackColor = System.Drawing.Color.White;
+            this.BLTAyuda.SetBalloonCaption(this.TXTDireccion, "Ayuda");
+            this.BLTAyuda.SetBalloonText(this.TXTDireccion, "Dirección del domicilio de la persona");
             // 
             // 
             // 
@@ -316,6 +324,8 @@
             // TXTCorreoElectronico
             // 
             this.TXTCorreoElectronico.BackColor = System.Drawing.Color.White;
+            this.BLTAyuda.SetBalloonCaption(this.TXTCorreoElectronico, "Ayuda");
+            this.BLTAyuda.SetBalloonText(this.TXTCorreoElectronico, "Correo Electrónico de la persona");
             // 
             // 
             // 
@@ -335,6 +345,8 @@
             // TXTCelular
             // 
             this.TXTCelular.BackColor = System.Drawing.Color.White;
+            this.BLTAyuda.SetBalloonCaption(this.TXTCelular, "Ayuda");
+            this.BLTAyuda.SetBalloonText(this.TXTCelular, "Número de Celular de la persona");
             // 
             // 
             // 
@@ -355,6 +367,8 @@
             // TXTNombres
             // 
             this.TXTNombres.BackColor = System.Drawing.Color.White;
+            this.BLTAyuda.SetBalloonCaption(this.TXTNombres, "Ayuda");
+            this.BLTAyuda.SetBalloonText(this.TXTNombres, "Nombre de la persona");
             // 
             // 
             // 
@@ -375,6 +389,8 @@
             // TXTApellidoMaterno
             // 
             this.TXTApellidoMaterno.BackColor = System.Drawing.Color.White;
+            this.BLTAyuda.SetBalloonCaption(this.TXTApellidoMaterno, "Ayuda");
+            this.BLTAyuda.SetBalloonText(this.TXTApellidoMaterno, "Apellido Materno de la persona");
             // 
             // 
             // 
@@ -399,6 +415,8 @@
             // 
             this.DTINacimiento.BackgroundStyle.Class = "DateTimeInputBackground";
             this.DTINacimiento.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.BLTAyuda.SetBalloonCaption(this.DTINacimiento, "Ayuda");
+            this.BLTAyuda.SetBalloonText(this.DTINacimiento, "Fecha de nacimiento de la persona");
             this.DTINacimiento.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.DTINacimiento.ButtonDropDown.Visible = true;
             this.DTINacimiento.IsPopupCalendarOpen = false;
@@ -444,6 +462,8 @@
             // 
             // 
             this.SWBSexo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.BLTAyuda.SetBalloonCaption(this.SWBSexo, "Ayuda ");
+            this.BLTAyuda.SetBalloonText(this.SWBSexo, "Sexo de la persona");
             this.SWBSexo.Location = new System.Drawing.Point(164, 3);
             this.SWBSexo.Name = "SWBSexo";
             this.SWBSexo.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -464,6 +484,8 @@
             // 
             // 
             this.SWBEstado.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.BLTAyuda.SetBalloonCaption(this.SWBEstado, "Ayuda");
+            this.BLTAyuda.SetBalloonText(this.SWBEstado, "Estado de la persona");
             this.SWBEstado.Location = new System.Drawing.Point(9, 3);
             this.SWBEstado.Name = "SWBEstado";
             this.SWBEstado.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -480,8 +502,10 @@
             // 
             // FRMPersona_Registrar
             // 
+            this.AcceptButton = this.BTNGrabar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BTNSalir;
             this.ClientSize = new System.Drawing.Size(703, 323);
             this.Controls.Add(this.GPPanelPrincipal);
             this.DoubleBuffered = true;
@@ -522,5 +546,6 @@
         private DevComponents.DotNetBar.ButtonX BTNCapturar;
         private System.Windows.Forms.PictureBox PCBCamara;
         private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.BalloonTip BLTAyuda;
     }
 }

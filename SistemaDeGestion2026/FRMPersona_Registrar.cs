@@ -253,7 +253,74 @@ namespace SistemaDeGestion2026
         {
             if (VerificarIntegridad())
             {
-                MessageBox.Show("Todo OK");
+                persona = new aperson();
+
+                if (!this.modificar)
+                {
+                    //Generar el correlativo
+                    correlativo.pxnctipcor = "aperson";
+                    if (correlativo.ObtenerSiguiente())
+                    {
+                        persona.papscodper = correlativo.cxncnumcor.ToString();
+                    }
+                }
+                else
+                {
+                    persona.papscodper = this.codPerMod;
+                }
+                persona.capsestper = SWBEstado.Value;
+                persona.capssexper = SWBSexo.Value;
+                persona.capsnumcid = TXTCI.Text;
+                persona.capsfecnac = DTINacimiento.Value;
+                persona.capsapepat = TXTApellidoPaterno.Text;
+                persona.capsapemat = TXTApellidoMaterno.Text;
+                persona.capsnomper = TXTNombres.Text;
+                persona.capsnumcel = TXTCelular.Text;
+                persona.capscorele = TXTCorreoElectronico.Text;
+                persona.capsdirper = TXTDireccion.Text;
+                                
+                if (!this.modificar)
+                {
+                    if (persona.Grabar())
+                    {
+                        MessageBox.Show("Persona guardada correctamente!!",
+                                        "Mensaje",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                        LimpiarCasillas();
+                        this.actualizar = true;
+                        this.FormClosing -= FRMPersona_Registrar_FormClosing;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Persona no se pudo guardar!!",
+                                        "Error",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    if (persona.Modificar())
+                    {
+                        MessageBox.Show("Persona modificada correctamente!!",
+                                        "Mensaje",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                        LimpiarCasillas();
+                        this.actualizar = true;
+                        this.FormClosing -= FRMPersona_Registrar_FormClosing;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Persona no se pudo modificar!!",
+                                            "Error",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Warning);
+                    }
+                }
             }
         }
     }
