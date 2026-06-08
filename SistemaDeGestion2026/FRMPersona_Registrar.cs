@@ -261,7 +261,8 @@ namespace SistemaDeGestion2026
                     correlativo.pxnctipcor = "aperson";
                     if (correlativo.ObtenerSiguiente())
                     {
-                        persona.papscodper = correlativo.cxncnumcor.ToString();
+                        persona.papscodper = correlativo.pxnctipcor + "-" +                            
+                                             correlativo.cxncnumcor.ToString("D12");
                     }
                 }
                 else
