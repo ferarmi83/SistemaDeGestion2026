@@ -1,5 +1,8 @@
-﻿using CapaRN;
+﻿using AForge.Video;
+using AForge.Video.DirectShow;
+using CapaRN;
 using DevComponents.DotNetBar.Controls;
+using SistemaDeGestion2026.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,12 +23,17 @@ namespace SistemaDeGestion2026
         public bool modificar = false;
         public String codPerMod = "";
         public bool actualizar = false;
+        //Variables para la camara
+        private FilterInfoCollection CaptureDevice; // list of webcam
+        private VideoCaptureDevice FinalFrame;
+        private bool TieneFoto = false;
         #endregion
 
         #region Constructor
         public FRMPersona_Registrar()
         {
             InitializeComponent();
+            DetectarCamaras();
         }
         #endregion
 
@@ -130,6 +138,10 @@ namespace SistemaDeGestion2026
             {
                 e.Cancel = true;
             }            
+            else
+                {
+                    ApagarCamara();
+                }
         }
 
         private void TXTCI_Enter(object sender, EventArgs e)
@@ -140,6 +152,7 @@ namespace SistemaDeGestion2026
 
         private void FRMPersona_Registrar_Load(object sender, EventArgs e)
         {
+            IniciarCamara();
             if (this.modificar)
             {
                 JalarDatos();
@@ -338,6 +351,55 @@ namespace SistemaDeGestion2026
 
         #endregion
 
+        #region Metodos para la Cámara
+        
+        private void DetectarCamaras()
+        {
+            CaptureDevice = new FilterInfoCollection(FilterCategory.VideoInputDevice);//constructor            
+            FinalFrame = new VideoCaptureDevice();
+        }
 
+        private void IniciarCamara()
+        {
+            try
+            {
+                FinalFrame = new VideoCaptureDevice(CaptureDevice[1].MonikerString);// specified web cam and its filter moniker string
+                FinalFrame.NewFrame += new NewFrameEventHandler(FinalFrame_NewFrame);// click button event is fired, 
+                FinalFrame.Start();
+            }
+            catch 
+            {
+                MessageBox.Show("No se tiene una cámara conectada al equipo",
+                    "Error de cámara",
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
+            }
+        }
+
+        void FinalFrame_NewFrame(object sender, NewFrameEventArgs eventArgs) // must be void so that it can be accessed everywhere.
+                                                                             // New Frame Event Args is an constructor of a class
+        {
+            PCBCamara.Image = (Bitmap)eventArgs.Frame.Clone();// clone the bitmap
+        }
+
+        private void ApagarCamara()
+        {
+            if (FinalFrame.IsRunning == true) FinalFrame.Stop();
+        }
+
+        #endregion
+
+        private void BTNLimpiarFoto_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea borrar la imagen?",
+                            "Pregunta",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question,
+                            MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                TieneFoto = false;
+                //PCBFotografia.Image = Resources.NoImagen;
+            }
+        }
     }
 }

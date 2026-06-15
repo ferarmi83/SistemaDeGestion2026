@@ -193,6 +193,7 @@
             this.BTNLimpiarFoto.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.BTNLimpiarFoto.TabIndex = 1;
             this.BTNLimpiarFoto.Text = "L&impiar";
+            this.BTNLimpiarFoto.Click += new System.EventHandler(this.BTNLimpiarFoto_Click);
             // 
             // BTNCapturarFoto
             // 
