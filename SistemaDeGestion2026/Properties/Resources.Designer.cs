@@ -153,6 +153,16 @@ namespace SistemaDeGestion2026.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_persona {
+            get {
+                object obj = ResourceManager.GetObject("ic_persona", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_persona_modificar {
             get {
                 object obj = ResourceManager.GetObject("ic_persona_modificar", resourceCulture);

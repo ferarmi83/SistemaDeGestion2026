@@ -16,7 +16,7 @@ namespace SistemaDeGestion2026
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FRMPersona_Registrar());
+            Application.Run(new FRMPrincipal());
         }
     }
 }

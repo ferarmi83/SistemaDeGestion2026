@@ -23,5 +23,16 @@ namespace SistemaDeGestion2026
             banner.ShowDialog();
             this.Opacity = 1;
         }
+
+        private void BTNPersonas_Click(object sender, EventArgs e)
+        {
+            foreach (Form s in this.MdiChildren)
+            {
+                s.Close();
+            }
+            FRMPersona_Lista a = new FRMPersona_Lista();
+            a.MdiParent = this;
+            a.Show();
+        }
     }
 }

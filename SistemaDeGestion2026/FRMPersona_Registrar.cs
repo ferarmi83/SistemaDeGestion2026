@@ -100,18 +100,21 @@ namespace SistemaDeGestion2026
             persona.papscodper = this.codPerMod;
             persona.ObtenerDatos();
             SWBEstado.Value = persona.capsestper;
-            TXTCI.Text = persona.capsnumcid;
-            
+            TXTCI.Text = persona.capsnumcid;            
+            SWBSexo.Value = persona.capssexper;            
+            DTINacimiento.Value = persona.capsfecnac;
+            TXTApellidoPaterno.Text = persona.capsapepat;
+            TXTApellidoMaterno.Text = persona.capsapemat;
+            TXTNombres.Text = persona.capsnomper;
+            TXTCelular.Text = persona.capsnumcel;
+            TXTCorreoElectronico.Text = persona.capscorele;
+            TXTDireccion.Text = persona.capsdirper;
         }
 
         #endregion
 
         #region Eventos
-
-
-
-        #endregion
-
+            
         private void BTNSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -324,5 +327,17 @@ namespace SistemaDeGestion2026
                 }
             }
         }
+
+        private void BTNAbrirFoto_Click(object sender, EventArgs e)
+        {
+            if (OFDElegirImagen.ShowDialog() == DialogResult.OK)
+            {
+                PCBFotografia.ImageLocation = OFDElegirImagen.FileName;
+            }
+        }
+
+        #endregion
+
+
     }
 }
