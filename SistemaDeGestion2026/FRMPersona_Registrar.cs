@@ -117,6 +117,16 @@ namespace SistemaDeGestion2026
             TXTCelular.Text = persona.capsnumcel;
             TXTCorreoElectronico.Text = persona.capscorele;
             TXTDireccion.Text = persona.capsdirper;
+            if (persona.capsfotper == "")
+            {
+                TieneFoto = false;
+                PCBFotografia.Image = Resources.NoImagen;
+            }
+            else
+            {
+                TieneFoto = true;
+                PCBFotografia.Image = MetodosGenerales.ConvertBase64StringToImage(persona.capsfotper);
+            }
         }
 
         #endregion
@@ -139,9 +149,9 @@ namespace SistemaDeGestion2026
                 e.Cancel = true;
             }            
             else
-                {
-                    ApagarCamara();
-                }
+            {
+                ApagarCamara();
+            }
         }
 
         private void TXTCI_Enter(object sender, EventArgs e)
@@ -295,7 +305,16 @@ namespace SistemaDeGestion2026
                 persona.capsnumcel = TXTCelular.Text;
                 persona.capscorele = TXTCorreoElectronico.Text;
                 persona.capsdirper = TXTDireccion.Text;
-                                
+                //Fotografia del producto
+                if (TieneFoto)
+                {
+                    persona.capsfotper = MetodosGenerales.ConvertImageToBase64String(PCBFotografia.Image);
+                }
+                else
+                {
+                    persona.capsfotper = "";
+                }
+
                 if (!this.modificar)
                 {
                     if (persona.Grabar())
@@ -307,6 +326,7 @@ namespace SistemaDeGestion2026
                         LimpiarCasillas();
                         this.actualizar = true;
                         this.FormClosing -= FRMPersona_Registrar_FormClosing;
+                        ApagarCamara();
                         this.Close();
                     }
                     else
@@ -328,6 +348,7 @@ namespace SistemaDeGestion2026
                         LimpiarCasillas();
                         this.actualizar = true;
                         this.FormClosing -= FRMPersona_Registrar_FormClosing;
+                        ApagarCamara();
                         this.Close();
                     }
                     else
@@ -346,6 +367,7 @@ namespace SistemaDeGestion2026
             if (OFDElegirImagen.ShowDialog() == DialogResult.OK)
             {
                 PCBFotografia.ImageLocation = OFDElegirImagen.FileName;
+                TieneFoto = true;
             }
         }
 
@@ -398,8 +420,15 @@ namespace SistemaDeGestion2026
                             MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 TieneFoto = false;
-                //PCBFotografia.Image = Resources.NoImagen;
+                PCBFotografia.Image = Resources.NoImagen;
             }
         }
+
+        private void BTNCapturarFoto_Click(object sender, EventArgs e)
+        {
+            PCBFotografia.Image = PCBCamara.Image;
+        }
+
+        
     }
 }

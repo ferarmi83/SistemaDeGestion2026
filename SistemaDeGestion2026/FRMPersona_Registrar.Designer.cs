@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMPersona_Registrar));
             this.GPPanelPrincipal = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.GPFotografia = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.PCBFotografia = new System.Windows.Forms.PictureBox();
@@ -159,7 +160,9 @@
             // 
             // PCBFotografia
             // 
+            this.PCBFotografia.BackColor = System.Drawing.Color.White;
             this.PCBFotografia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PCBFotografia.Image = ((System.Drawing.Image)(resources.GetObject("PCBFotografia.Image")));
             this.PCBFotografia.Location = new System.Drawing.Point(179, 8);
             this.PCBFotografia.Name = "PCBFotografia";
             this.PCBFotografia.Size = new System.Drawing.Size(170, 132);
@@ -207,13 +210,17 @@
             this.BTNCapturarFoto.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.BTNCapturarFoto.TabIndex = 0;
             this.BTNCapturarFoto.Text = "&Capturar";
+            this.BTNCapturarFoto.Click += new System.EventHandler(this.BTNCapturarFoto_Click);
             // 
             // PCBCamara
             // 
+            this.PCBCamara.BackColor = System.Drawing.Color.White;
             this.PCBCamara.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PCBCamara.Image = ((System.Drawing.Image)(resources.GetObject("PCBCamara.Image")));
             this.PCBCamara.Location = new System.Drawing.Point(3, 8);
             this.PCBCamara.Name = "PCBCamara";
             this.PCBCamara.Size = new System.Drawing.Size(170, 132);
+            this.PCBCamara.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PCBCamara.TabIndex = 0;
             this.PCBCamara.TabStop = false;
             // 
