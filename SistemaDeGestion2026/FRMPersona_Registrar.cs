@@ -427,6 +427,7 @@ namespace SistemaDeGestion2026
         private void BTNCapturarFoto_Click(object sender, EventArgs e)
         {
             PCBFotografia.Image = PCBCamara.Image;
+            TieneFoto = true;
         }
 
         
