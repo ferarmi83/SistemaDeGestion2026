@@ -127,9 +127,7 @@ namespace SistemaDeGestion2026
         private void BTNFiltrar_Click(object sender, EventArgs e)
         {
             ActualizarGrid();
-        }
-
-        #endregion
+        }        
 
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -210,5 +208,7 @@ namespace SistemaDeGestion2026
         {
             TXTFiltrar.SelectAll();
         }
+
+        #endregion
     }
 }
