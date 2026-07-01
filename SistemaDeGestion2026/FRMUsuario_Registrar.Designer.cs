@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMUsuario_Registrar));
             this.GPPanelPrincipal = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.axDPFPEnrollmentControl1 = new AxDPFPCtlXLib.AxDPFPEnrollmentControl();
             this.TXTNombreLogin = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.BTNAgregarPersona = new DevComponents.DotNetBar.ButtonX();
             this.BTNBuscarUsuario = new DevComponents.DotNetBar.ButtonX();
@@ -39,7 +40,6 @@
             this.TXTCI = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.TXTNombres = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.SWBEstado = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.axDPFPEnrollmentControl1 = new AxDPFPCtlXLib.AxDPFPEnrollmentControl();
             this.GPPanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axDPFPEnrollmentControl1)).BeginInit();
             this.SuspendLayout();
@@ -95,6 +95,15 @@
             this.GPPanelPrincipal.TabIndex = 1;
             this.GPPanelPrincipal.Text = "Usuario";
             // 
+            // axDPFPEnrollmentControl1
+            // 
+            this.axDPFPEnrollmentControl1.Enabled = true;
+            this.axDPFPEnrollmentControl1.Location = new System.Drawing.Point(9, 35);
+            this.axDPFPEnrollmentControl1.Name = "axDPFPEnrollmentControl1";
+            this.axDPFPEnrollmentControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axDPFPEnrollmentControl1.OcxState")));
+            this.axDPFPEnrollmentControl1.Size = new System.Drawing.Size(660, 386);
+            this.axDPFPEnrollmentControl1.TabIndex = 17;
+            // 
             // TXTNombreLogin
             // 
             this.TXTNombreLogin.BackColor = System.Drawing.Color.White;
@@ -112,6 +121,8 @@
             this.TXTNombreLogin.Size = new System.Drawing.Size(118, 26);
             this.TXTNombreLogin.TabIndex = 16;
             this.TXTNombreLogin.WatermarkText = "Login ";
+            this.TXTNombreLogin.Enter += new System.EventHandler(this.TXTCI_Enter);
+            this.TXTNombreLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTNombreLogin_KeyDown);
             // 
             // BTNAgregarPersona
             // 
@@ -152,6 +163,7 @@
             this.BTNSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.BTNSalir.TabIndex = 13;
             this.BTNSalir.Text = "&Salir";
+            this.BTNSalir.Click += new System.EventHandler(this.BTNSalir_Click);
             // 
             // BTNLimpiar
             // 
@@ -196,6 +208,7 @@
             this.TXTCI.Size = new System.Drawing.Size(95, 26);
             this.TXTCI.TabIndex = 0;
             this.TXTCI.WatermarkText = "CI";
+            this.TXTCI.Enter += new System.EventHandler(this.TXTCI_Enter);
             // 
             // TXTNombres
             // 
@@ -235,15 +248,6 @@
             this.SWBEstado.Value = true;
             this.SWBEstado.ValueObject = "Y";
             // 
-            // axDPFPEnrollmentControl1
-            // 
-            this.axDPFPEnrollmentControl1.Enabled = true;
-            this.axDPFPEnrollmentControl1.Location = new System.Drawing.Point(9, 35);
-            this.axDPFPEnrollmentControl1.Name = "axDPFPEnrollmentControl1";
-            this.axDPFPEnrollmentControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axDPFPEnrollmentControl1.OcxState")));
-            this.axDPFPEnrollmentControl1.Size = new System.Drawing.Size(660, 386);
-            this.axDPFPEnrollmentControl1.TabIndex = 17;
-            // 
             // FRMUsuario_Registrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -255,6 +259,8 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRMUsuario_Registrar";
             this.Text = "FRMUsuario_Registrar";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRMUsuario_Registrar_FormClosing);
+            this.Load += new System.EventHandler(this.FRMUsuario_Registrar_Load);
             this.GPPanelPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.axDPFPEnrollmentControl1)).EndInit();
             this.ResumeLayout(false);

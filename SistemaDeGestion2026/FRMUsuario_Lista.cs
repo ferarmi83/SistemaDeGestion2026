@@ -14,7 +14,8 @@ namespace SistemaDeGestion2026
     public partial class FRMUsuario_Lista : DevComponents.DotNetBar.Office2007Form
     {
         #region Variables
-        private lususis usuario = new lususis();
+        private lususis lusuario = new lususis();
+        private aususis ausuario = new aususis();
         private List<lususis> lista_usuarios = new List<lususis>();
         #endregion
 
@@ -30,7 +31,7 @@ namespace SistemaDeGestion2026
         {
             DTGLista.Rows.Clear();
             lista_usuarios.Clear();
-            lista_usuarios = usuario.Lista("capsnumcid like '%" + TXTFiltrar.Text + "%' or " +
+            lista_usuarios = lusuario.Lista("capsnumcid like '%" + TXTFiltrar.Text + "%' or " +
                                            "capsapepat like '%" + TXTFiltrar.Text + "%' or " +
                                            "capsapemat like '%" + TXTFiltrar.Text + "%' or " +
                                            "capsnomper like '%" + TXTFiltrar.Text + "%' limit " +
@@ -71,6 +72,114 @@ namespace SistemaDeGestion2026
         {
             FRMUsuario_Registrar a = new FRMUsuario_Registrar();
             a.ShowDialog();
+        }
+
+        private void BTNReporte_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTNModificar_Click(object sender, EventArgs e)
+        {
+            if (DTGLista.SelectedRows.Count > 0)
+            {
+                FRMUsuario_Registrar F1 = new FRMUsuario_Registrar();
+                F1.modificar = true;
+                F1.codUsuMod = DTGLista[0, DTGLista.SelectedRows[0].Index].Value.ToString();
+                F1.ShowDialog();
+                if (F1.actualizar)
+                {
+                    ActualizarGrid();
+                }
+            }
+        }
+
+        private void DTGLista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (DTGLista.SelectedRows.Count > 0)
+                {
+                    FRMUsuario_Registrar F1 = new FRMUsuario_Registrar();
+                    F1.modificar = true;
+                    F1.codUsuMod = DTGLista[0, e.RowIndex].Value.ToString();
+                    F1.ShowDialog();
+                    if (F1.actualizar)
+                    {
+                        ActualizarGrid();
+                    }
+                }
+            }
+        }
+
+        private void BTNFiltrar_Click(object sender, EventArgs e)
+        {
+            ActualizarGrid();
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DTGLista.SelectedRows.Count > 0)
+            {
+                ausuario.pauscodusu = DTGLista[0, DTGLista.SelectedRows[0].Index].Value.ToString();
+                if (ausuario.ObtenerDatos())
+                {
+                    ausuario.causestusu = false;
+                    if (ausuario.Modificar())
+                    {
+                        MessageBox.Show("Usuario inhabilitado correctamente");
+                        ActualizarGrid();
+                    }
+                }
+            }
+        }
+
+        private void habilitarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DTGLista.SelectedRows.Count > 0)
+            {
+                ausuario.pauscodusu = DTGLista[0, DTGLista.SelectedRows[0].Index].Value.ToString();
+                if (ausuario.ObtenerDatos())
+                {
+                    ausuario.causestusu = true;
+                    if (ausuario.Modificar())
+                    {
+                        MessageBox.Show("Usuario habilitado correctamente");
+                        ActualizarGrid();
+                    }
+                }
+            }
+        }
+
+        private void CMSMenu_Opening(object sender, CancelEventArgs e)
+        {
+            if (DTGLista.SelectedRows.Count > 0)
+            {
+                ausuario.pauscodusu = DTGLista[0, DTGLista.SelectedRows[0].Index].Value.ToString();
+                if (ausuario.ObtenerDatos())
+                {
+                    if (ausuario.causestusu)
+                    {
+                        CMSMenu.Items[2].Visible = false;
+                        CMSMenu.Items[1].Visible = true;
+
+                    }
+                    else
+                    {
+                        CMSMenu.Items[2].Visible = true;
+                        CMSMenu.Items[1].Visible = false;
+                    }
+                }
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void TXTFiltrar_Enter(object sender, EventArgs e)
+        {
+            TXTFiltrar.SelectAll();
         }
     }
 }

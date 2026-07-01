@@ -103,13 +103,11 @@ namespace SistemaDeGestion2026
 
             return respuesta;
         }
-
         private void LimpiarCasillas()
         {
             SWBEstado.Value = true;
             TXTCI.Text = "";      
         }
-
         private void JalarDatos()
         {
             persona.papscodper = this.codPerMod;
