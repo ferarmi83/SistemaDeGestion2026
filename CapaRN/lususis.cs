@@ -233,7 +233,7 @@ namespace CapaRN
                                  "fauscodper," +
                                  "causnomlog," +
                                  "causpasswo," +
-                                 "cuascodhu1," +
+                                 "causcodhu1," +
                                  "causcodhu2," +
                                  "causcodhu3," +
                                  "causcodhu4," +

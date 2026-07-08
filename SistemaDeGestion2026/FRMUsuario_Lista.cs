@@ -31,10 +31,10 @@ namespace SistemaDeGestion2026
         {
             DTGLista.Rows.Clear();
             lista_usuarios.Clear();
-            lista_usuarios = lusuario.Lista("capsnumcid like '%" + TXTFiltrar.Text + "%' or " +
-                                           "capsapepat like '%" + TXTFiltrar.Text + "%' or " +
-                                           "capsapemat like '%" + TXTFiltrar.Text + "%' or " +
-                                           "capsnomper like '%" + TXTFiltrar.Text + "%' limit " +
+            lista_usuarios = lusuario.Lista("(capsnumcid like '%" + TXTFiltrar.Text + "%' or " +
+                                             "capsapepat like '%" + TXTFiltrar.Text + "%' or " +
+                                             "capsapemat like '%" + TXTFiltrar.Text + "%' or " +
+                                             "capsnomper like '%" + TXTFiltrar.Text + "%') limit " +
                                            IINFilas.Value.ToString()
                                            );
             foreach (lususis a in lista_usuarios)
@@ -62,6 +62,7 @@ namespace SistemaDeGestion2026
         }
         #endregion
 
+        #region Eventos
         private void FRMUsuario_Lista_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
@@ -72,6 +73,10 @@ namespace SistemaDeGestion2026
         {
             FRMUsuario_Registrar a = new FRMUsuario_Registrar();
             a.ShowDialog();
+            if (a.actualizar)
+            {
+                ActualizarGrid();
+            }
         }
 
         private void BTNReporte_Click(object sender, EventArgs e)
@@ -181,5 +186,7 @@ namespace SistemaDeGestion2026
         {
             TXTFiltrar.SelectAll();
         }
+
+        #endregion
     }
 }

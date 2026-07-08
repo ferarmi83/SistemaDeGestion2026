@@ -179,6 +179,7 @@
             this.BTNUsuarios.Name = "BTNUsuarios";
             this.BTNUsuarios.SubItemsExpandWidth = 14;
             this.BTNUsuarios.Text = "Usuarios";
+            this.BTNUsuarios.Click += new System.EventHandler(this.BTNUsuarios_Click);
             // 
             // ribbonPanel2
             // 
@@ -438,7 +439,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 397);
+            this.ClientSize = new System.Drawing.Size(910, 395);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "FRMPrincipal";

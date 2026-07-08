@@ -18,6 +18,8 @@ namespace SistemaDeGestion2026
     {
         #region Variables
         private aususis usuario = new aususis();
+        private aperson persona = new aperson();
+        private bool personaok = false;
         private xnumcor correlativo = new xnumcor();
         public bool modificar = false;
         public String codUsuMod = "";
@@ -52,15 +54,21 @@ namespace SistemaDeGestion2026
             TXTCI.Text = "";
             TXTNombres.Text = "Nombre Completo";
             TXTNombreLogin.Text = "";
+            DPEHuellas.EnrolledFingerMask = 0;
             TXTNombreLogin.Focus();
         }
         private void JalarDatos()
         {
             usuario.pauscodusu = this.codUsuMod;
             usuario.ObtenerDatos();
+            persona.papscodper = usuario.fauscodper;
+            persona.ObtenerDatos();
             SWBEstado.Value = usuario.causestusu;
-            TXTCI.Text = "";            
-            TXTNombres.Text = "";
+            TXTCI.Text = persona.capsnumcid;            
+            TXTNombres.Text =   persona.capsapepat + " " + 
+                                persona.capsapemat + " " + 
+                                persona.capsnomper;
+            DPEHuellas.EnrolledFingerMask = usuario.causmashue;
             TXTNombreLogin.Text = usuario.causnomlog;
         }
 
@@ -130,6 +138,150 @@ namespace SistemaDeGestion2026
             if (!teclaValida)
             {
                 e.SuppressKeyPress = true;
+            }
+        }
+
+        private void BTNBuscarUsuario_Click(object sender, EventArgs e)
+        {
+            FRMPersona_Buscar a = new FRMPersona_Buscar();
+            a.ShowDialog();
+            if (a.seleccionadoOk)
+            {
+                this.persona = a.persona;
+                this.personaok = true;
+                TXTCI.Text = persona.capsnumcid;
+                TXTNombres.Text = persona.capsapepat + " " +
+                                  persona.capsapemat + " " +
+                                  persona.capsnomper;
+            }
+            else
+            {
+                this.personaok = false;
+                TXTCI.Text = "";
+                TXTNombres.Text = "Nombre Completo";
+            }
+        }
+
+        private void BTNGrabar_Click(object sender, EventArgs e)
+        {
+            if (VerificarIntegridad())
+            {                
+                if (!this.modificar)
+                {
+                    //Generar el correlativo
+                    correlativo.pxnctipcor = "aususis";
+                    if (correlativo.ObtenerSiguiente())
+                    {
+                        usuario.pauscodusu = correlativo.pxnctipcor + "-" +
+                                             correlativo.cxncnumcor.ToString("D12");
+                    }
+                }
+                else
+                {
+                    usuario.pauscodusu = this.codUsuMod;
+                }                
+                usuario.causestusu = SWBEstado.Value;
+                usuario.causnomlog = TXTNombreLogin.Text;
+                if (!modificar)
+                    usuario.causactpas = false;
+
+                usuario.causmashue = DPEHuellas.EnrolledFingerMask;                
+                usuario.fauscodper = persona.papscodper;
+
+                if (!this.modificar)
+                {
+                    if (usuario.Grabar())
+                    {
+                        MessageBox.Show("Usuario guardado correctamente!!",
+                                        "Mensaje",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                        LimpiarCasillas();
+                        this.actualizar = true;
+                        this.FormClosing -= FRMUsuario_Registrar_FormClosing;                        
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario no se pudo guardar!!",
+                                        "Error",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    if (usuario.Modificar())
+                    {
+                        MessageBox.Show("Usuario modificado correctamente!!",
+                                        "Mensaje",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                        LimpiarCasillas();
+                        this.actualizar = true;
+                        this.FormClosing -= FRMUsuario_Registrar_FormClosing;                        
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario no se pudo modificar!!",
+                                            "Error",
+                                            MessageBoxButtons.OK,
+                                            MessageBoxIcon.Warning);
+                    }
+                }
+            }
+        }
+        
+        private void DPEHuellas_OnDelete(object Control, int FingerMask, ref DPFP.Gui.EventHandlerStatus EventHandlerStatus)
+        {
+            if (usuario.causnumhu1 == FingerMask)
+            {
+                usuario.causnumhu1 = 0;
+                usuario.causcodhu1 = "";
+            }
+            else if (usuario.causnumhu2 == FingerMask)
+            {
+                usuario.causnumhu2 = 0;
+                usuario.causcodhu2 = "";
+            }
+            else if (usuario.causnumhu3 == FingerMask)
+            {
+                usuario.causnumhu3 = 0;
+                usuario.causcodhu3 = "";
+            }
+            else if (usuario.causnumhu4 == FingerMask)
+            {
+                usuario.causnumhu4 = 0;
+                usuario.causcodhu4 = "";
+            }
+        }
+
+        private void DPEHuellas_OnEnroll(object Control, int FingerMask, DPFP.Template Template, ref DPFP.Gui.EventHandlerStatus EventHandlerStatus)
+        {
+            byte[] aux = new byte[1700];
+            Template.Serialize(ref aux);
+            string cadena = Convert.ToBase64String(aux);
+
+            if (usuario.causnumhu1 == 0)
+            {
+                usuario.causnumhu1 = FingerMask;
+                usuario.causcodhu1 = cadena;
+            }
+            else if (usuario.causnumhu2 == 0)
+            {
+                usuario.causnumhu2 = FingerMask;
+                usuario.causcodhu2 = cadena;
+            }
+            else if (usuario.causnumhu3 == 0)
+            {
+                usuario.causnumhu3 = FingerMask;
+                usuario.causcodhu3 = cadena;
+            }
+            else if (usuario.causnumhu4 == 0)
+            {
+                usuario.causnumhu4 = FingerMask;
+                usuario.causcodhu4 = cadena;
             }
         }
     }

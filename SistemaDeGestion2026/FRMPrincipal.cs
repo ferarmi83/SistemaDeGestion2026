@@ -34,5 +34,16 @@ namespace SistemaDeGestion2026
             a.MdiParent = this;
             a.Show();
         }
+
+        private void BTNUsuarios_Click(object sender, EventArgs e)
+        {
+            foreach (Form s in this.MdiChildren)
+            {
+                s.Close();
+            }
+            FRMUsuario_Lista a = new FRMUsuario_Lista();
+            a.MdiParent = this;
+            a.Show();
+        }
     }
 }
