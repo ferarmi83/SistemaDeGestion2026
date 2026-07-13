@@ -31,7 +31,8 @@ namespace SistemaDeGestion2026
         {
             DTGLista.Rows.Clear();
             lista_personas.Clear();
-            lista_personas = persona.Lista("(capsnumcid like '%" + TXTFiltrar.Text + "%' or " +
+            String soloSinUsuario = "papscodper not in (select papscodper from aperson,aususis where papscodper=fauscodper order by papscodper)"; 
+            lista_personas = persona.Lista(soloSinUsuario + " and (capsnumcid like '%" + TXTFiltrar.Text + "%' or " +
                                             "capsapepat like '%" + TXTFiltrar.Text + "%' or " +
                                             "capsapemat like '%" + TXTFiltrar.Text + "%' or " +
                                             "capsnomper like '%" + TXTFiltrar.Text + "%') and capsestper=true " + 

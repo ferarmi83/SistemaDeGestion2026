@@ -159,7 +159,7 @@ namespace CapaRN
                     return false;
                 }
             }
-        public bool ObtenerDatosCI()
+        public bool ObtenerDatosCI(bool modificar,string ci)
         {
             this.Conexion.Conectar();
             string sql = "select " +
@@ -178,6 +178,10 @@ namespace CapaRN
                          "from aperson " +
                          "where " +
                                 "capsnumcid = @capsnumcid";
+            if (modificar)
+            {
+                sql += " and capsnumcid!='" + ci +"'";
+            }
 
             this.Conexion.PrepararComando(sql);
 

@@ -42,15 +42,17 @@ namespace SistemaDeGestion2026
         private bool VerificarIntegridad()
         {
             bool respuesta = true;
-            persona.capsnumcid = TXTCI.Text;
-
+            
+            aperson persona2 = new aperson();
+            persona2.capsnumcid = TXTCI.Text;
+            
             if (TXTCI.Text.Replace(" ", "") == "")
             {
                 MessageBox.Show("Introduzca el CI de la persona", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TXTCI.Focus();
                 respuesta = false;
             }
-            else if (persona.ObtenerDatosCI()&&!modificar)
+            else if (persona2.ObtenerDatosCI(modificar, persona.capsnumcid))
             {
                 MessageBox.Show("Ya existe una persona con ese CI", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TXTCI.Focus();
