@@ -37,7 +37,9 @@ namespace SistemaDeGestion2026
 
         private bool VerificarIntegridad()
         {
-            bool respuesta = true;            
+            bool respuesta = true;
+            aususis usuario2 = new aususis();
+            usuario2.causnomlog = TXTNombreLogin.Text;
 
             if (TXTNombreLogin.Text.Replace(" ", "") == "")
             {
@@ -45,7 +47,13 @@ namespace SistemaDeGestion2026
                 TXTNombreLogin.Focus();
                 respuesta = false;
             }
-            
+            else if (usuario2.ObtenerDatosLogin(modificar, usuario.causnomlog))
+            {
+                MessageBox.Show("Ya existe ese Login Registrado", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                TXTNombreLogin.Focus();
+                respuesta = false;
+            }
+
             return respuesta;
         }
         private void LimpiarCasillas()
@@ -183,7 +191,7 @@ namespace SistemaDeGestion2026
                 usuario.causestusu = SWBEstado.Value;
                 usuario.causnomlog = TXTNombreLogin.Text;
                 if (!modificar)
-                    usuario.causactpas = false;
+                    usuario.causactpas = true;
 
                 usuario.causmashue = DPEHuellas.EnrolledFingerMask;                
                 usuario.fauscodper = persona.papscodper;
