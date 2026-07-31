@@ -50,6 +50,18 @@ namespace SistemaDeGestion2026
         {
             FRMIniciar_Sesion a = new FRMIniciar_Sesion();            
             a.ShowDialog();
+            if (a.actualizarPassword)
+            {
+                FRMModificar_Password b = new FRMModificar_Password();
+                b.usuario = a.usuario;
+                b.persona = a.persona;
+                b.ShowDialog();
+            }
+            if (a.loginExitoso)
+            {
+                //Cambiar el estado del formulario principal
+            }
+
         }
     }
 }
