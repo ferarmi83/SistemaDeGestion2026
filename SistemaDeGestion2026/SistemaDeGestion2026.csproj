@@ -73,6 +73,12 @@
     <Compile Include="FRMIniciar_Sesion.Designer.cs">
       <DependentUpon>FRMIniciar_Sesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMIniciar_Sesion_Huella.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMIniciar_Sesion_Huella.Designer.cs">
+      <DependentUpon>FRMIniciar_Sesion_Huella.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRMModificar_Password.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FRMIniciar_Sesion.resx">
       <DependentUpon>FRMIniciar_Sesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMIniciar_Sesion_Huella.resx">
+      <DependentUpon>FRMIniciar_Sesion_Huella.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMModificar_Password.resx">
       <DependentUpon>FRMModificar_Password.cs</DependentUpon>
@@ -286,6 +295,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_ingresar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_iniciar_sesion_huella.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

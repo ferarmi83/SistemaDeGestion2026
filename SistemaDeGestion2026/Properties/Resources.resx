@@ -124,6 +124,9 @@
   <data name="ic_cerrar_sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_cerrar_sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ic_ingresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_ingresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ic_mostrar_password" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_mostrar_password.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -202,7 +205,7 @@
   <data name="banner_proyecto_ropa_0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\banner_proyecto_ropa_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_ingresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_ingresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_iniciar_sesion_huella" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_iniciar_sesion_huella.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

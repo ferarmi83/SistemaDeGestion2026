@@ -193,6 +193,16 @@ namespace SistemaDeGestion2026.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_iniciar_sesion_huella {
+            get {
+                object obj = ResourceManager.GetObject("ic_iniciar_sesion_huella", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_limpiar {
             get {
                 object obj = ResourceManager.GetObject("ic_limpiar", resourceCulture);

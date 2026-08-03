@@ -46,6 +46,7 @@
             this.BTNPersonas = new DevComponents.DotNetBar.ButtonItem();
             this.BTNUsuarios = new DevComponents.DotNetBar.ButtonItem();
             this.BTNLogin = new DevComponents.DotNetBar.ButtonItem();
+            this.BTNLoginHuella = new DevComponents.DotNetBar.ButtonItem();
             this.BTNActualizarPassword = new DevComponents.DotNetBar.ButtonItem();
             this.BTNCerrarSesion = new DevComponents.DotNetBar.ButtonItem();
             this.BTNConfigurar = new DevComponents.DotNetBar.ButtonItem();
@@ -234,6 +235,7 @@
             this.itemContainer3.Name = "itemContainer3";
             this.itemContainer3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.BTNLogin,
+            this.BTNLoginHuella,
             this.BTNActualizarPassword,
             this.BTNCerrarSesion});
             // 
@@ -316,6 +318,16 @@
             this.BTNLogin.Text = "&Iniciar Sesión";
             this.BTNLogin.Click += new System.EventHandler(this.BTNLogin_Click);
             // 
+            // BTNLoginHuella
+            // 
+            this.BTNLoginHuella.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.BTNLoginHuella.Image = global::SistemaDeGestion2026.Properties.Resources.ic_iniciar_sesion_huella;
+            this.BTNLoginHuella.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.BTNLoginHuella.Name = "BTNLoginHuella";
+            this.BTNLoginHuella.SubItemsExpandWidth = 24;
+            this.BTNLoginHuella.Text = "&Iniciar Sesión";
+            this.BTNLoginHuella.Click += new System.EventHandler(this.BTNLoginHuella_Click);
+            // 
             // BTNActualizarPassword
             // 
             this.BTNActualizarPassword.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
@@ -358,7 +370,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 383);
+            this.ClientSize = new System.Drawing.Size(910, 379);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "FRMPrincipal";
@@ -396,6 +408,7 @@
         private DevComponents.DotNetBar.StyleManager styleManager1;
         private DevComponents.DotNetBar.ButtonItem BTNPersonas;
         private DevComponents.DotNetBar.ButtonItem BTNUsuarios;
+        private DevComponents.DotNetBar.ButtonItem BTNLoginHuella;
     }
 }
 

@@ -57,7 +57,7 @@ namespace SistemaDeGestion2026
                 DTGLista[3, DTGLista.Rows.Count - 1].Value = a.capsapepat + " " +
                                                              a.capsapemat + " " +
                                                              a.capsnomper;
-                DTGLista[4, DTGLista.Rows.Count - 1].Value = a.causnomlog;                
+                DTGLista[4, DTGLista.Rows.Count - 1].Value = a.causnomlog;
             }
         }
         #endregion
@@ -188,5 +188,38 @@ namespace SistemaDeGestion2026
         }
 
         #endregion
+
+        private void BTNActualizarPassword_Click(object sender, EventArgs e)
+        {
+            if (DTGLista.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("¿Esta seguro que desea resetear el Password del usuario " +
+                                DTGLista[3, DTGLista.SelectedRows[0].Index].Value.ToString() + "?",
+                                "Confirmación",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question,
+                                MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                {
+                    ausuario.pauscodusu = DTGLista[0, DTGLista.SelectedRows[0].Index].Value.ToString();
+                    ausuario.ObtenerDatos();
+                    ausuario.causactpas = true;
+                    if (ausuario.Modificar())
+                    {
+                        MessageBox.Show("Password reseteado correctamente. El usuario deberá cambiar su password en el próximo inicio de sesión. Al loguear debe colocar como password su número de documento.",
+                                        "Mensaje",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al resetear el password del usuario.",
+                                        "Error",
+                                        MessageBoxButtons.OK,
+                                        MessageBoxIcon.Error);
+                    }
+
+                }
+            }
+        }
     }
 }
