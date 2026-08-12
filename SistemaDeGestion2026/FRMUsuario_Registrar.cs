@@ -191,8 +191,9 @@ namespace SistemaDeGestion2026
                 usuario.causestusu = SWBEstado.Value;
                 usuario.causnomlog = TXTNombreLogin.Text;
                 if (!modificar)
+                {
                     usuario.causactpas = true;
-
+                }
                 usuario.causmashue = DPEHuellas.EnrolledFingerMask;                
                 usuario.fauscodper = persona.papscodper;
 
