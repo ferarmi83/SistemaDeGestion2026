@@ -1,12 +1,5 @@
 ﻿using CapaRN;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaDeGestion2026
@@ -15,7 +8,7 @@ namespace SistemaDeGestion2026
     {
         #region Variables
         public aususis usuario = new aususis();
-        public aperson persona = new aperson();        
+        public aperson persona = new aperson();
         #endregion
 
         #region Constructor
@@ -27,7 +20,7 @@ namespace SistemaDeGestion2026
 
         #region Métodos
 
-        private void Estado_1() 
+        private void Estado_1()
         {
             foreach (Form s in this.MdiChildren)
             {
@@ -99,7 +92,7 @@ namespace SistemaDeGestion2026
 
         private void BTNLogin_Click(object sender, EventArgs e)
         {
-            FRMIniciar_Sesion a = new FRMIniciar_Sesion();            
+            FRMIniciar_Sesion a = new FRMIniciar_Sesion();
             a.ShowDialog();
             if (a.actualizarPassword)
             {
@@ -135,13 +128,29 @@ namespace SistemaDeGestion2026
 
         private void BTNCerrarSesion_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Desea cerrar sesión?", 
-                                "Pregunta", 
-                                MessageBoxButtons.YesNo, 
+            if (MessageBox.Show("¿Desea cerrar sesión?",
+                                "Pregunta",
+                                MessageBoxButtons.YesNo,
                                 MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Estado_1();
-            }            
+            }
+        }
+
+        private void BTNCategorias_Click(object sender, EventArgs e)
+        {
+            foreach (Form s in this.MdiChildren)
+            {
+                s.Close();
+            }
+            FRMCategoria_Lista a = new FRMCategoria_Lista();
+            a.MdiParent = this;
+            a.Show();
+        }
+
+        private void BTNProductos_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -71,6 +71,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FRMCategoria_Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMCategoria_Lista.Designer.cs">
+      <DependentUpon>FRMCategoria_Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMCategoria_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMCategoria_Registrar.Designer.cs">
+      <DependentUpon>FRMCategoria_Registrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRMFondo_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,12 @@
     <Compile Include="MetodosGenerales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FRMCategoria_Lista.resx">
+      <DependentUpon>FRMCategoria_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMCategoria_Registrar.resx">
+      <DependentUpon>FRMCategoria_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRMFondo_1.resx">
       <DependentUpon>FRMFondo_1.cs</DependentUpon>
     </EmbeddedResource>
@@ -332,6 +350,21 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_producto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_categoria_nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_categoria_modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_categoria_reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_categoria.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

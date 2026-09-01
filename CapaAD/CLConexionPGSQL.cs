@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-//LIbrerias para conexion a PosgreSQL
+﻿//LIbrerias para conexion a PosgreSQL
 using Npgsql;
+using System;
 //Libreria para leer de un Archivo de Configuración
 using System.Configuration;
-//Libreria para escribir y leer de un archivo de texto
-using System.IO;
 //Libreria de Datos
 using System.Data;
 using System.Data.Common;
+//Libreria para escribir y leer de un archivo de texto
+using System.IO;
 
 namespace CapaAD
 {
@@ -337,7 +334,7 @@ namespace CapaAD
         public void AsignarParametroFechaMes(string nombre, DateTime valor)
         {
             //AsignarParametro(nombre, "'", valor.ToString("MM/dd/yy HH:mm:ss"));
-            AsignarParametro(nombre, "'", valor.ToString("yyyy/MM/")+"01");
+            AsignarParametro(nombre, "'", valor.ToString("yyyy/MM/") + "01");
         }
 
         /// <summary>

@@ -1,12 +1,7 @@
 ﻿using CapaRN;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SistemaDeGestion2026
@@ -31,11 +26,11 @@ namespace SistemaDeGestion2026
         {
             DTGLista.Rows.Clear();
             lista_personas.Clear();
-            String soloSinUsuario = "papscodper not in (select papscodper from aperson,aususis where papscodper=fauscodper order by papscodper)"; 
+            String soloSinUsuario = "papscodper not in (select papscodper from aperson,aususis where papscodper=fauscodper order by papscodper)";
             lista_personas = persona.Lista(soloSinUsuario + " and (capsnumcid like '%" + TXTFiltrar.Text + "%' or " +
                                             "capsapepat like '%" + TXTFiltrar.Text + "%' or " +
                                             "capsapemat like '%" + TXTFiltrar.Text + "%' or " +
-                                            "capsnomper like '%" + TXTFiltrar.Text + "%') and capsestper=true " + 
+                                            "capsnomper like '%" + TXTFiltrar.Text + "%') and capsestper=true " +
                                             "limit " +
                                            IINFilas.Value.ToString()
                                            );
@@ -106,13 +101,13 @@ namespace SistemaDeGestion2026
         private void BTNAceptar_Click(object sender, EventArgs e)
         {
             if (DTGLista.SelectedRows.Count == 1)
-            { 
+            {
                 persona.papscodper = DTGLista[0, DTGLista.SelectedRows[0].Index].Value.ToString();
                 if (persona.ObtenerDatos())
                 {
-                    seleccionadoOk = true;               
+                    seleccionadoOk = true;
                     this.Close();
-                }                
+                }
             }
         }
 
