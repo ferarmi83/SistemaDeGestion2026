@@ -193,6 +193,56 @@ namespace SistemaDeGestion2026.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_cliente {
+            get {
+                object obj = ResourceManager.GetObject("ic_cliente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_cliente_guardar {
+            get {
+                object obj = ResourceManager.GetObject("ic_cliente_guardar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_cliente_modificar {
+            get {
+                object obj = ResourceManager.GetObject("ic_cliente_modificar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_cliente_reporte {
+            get {
+                object obj = ResourceManager.GetObject("ic_cliente_reporte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_codigo_barras {
+            get {
+                object obj = ResourceManager.GetObject("ic_codigo_barras", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_configurar {
             get {
                 object obj = ResourceManager.GetObject("ic_configurar", resourceCulture);
@@ -316,6 +366,46 @@ namespace SistemaDeGestion2026.Properties {
         internal static System.Drawing.Bitmap ic_producto {
             get {
                 object obj = ResourceManager.GetObject("ic_producto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_producto_modificar {
+            get {
+                object obj = ResourceManager.GetObject("ic_producto_modificar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_producto_nuevo {
+            get {
+                object obj = ResourceManager.GetObject("ic_producto_nuevo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_producto_reporte {
+            get {
+                object obj = ResourceManager.GetObject("ic_producto_reporte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_proveedor {
+            get {
+                object obj = ResourceManager.GetObject("ic_proveedor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

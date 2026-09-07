@@ -83,6 +83,18 @@
     <Compile Include="FRMCategoria_Registrar.Designer.cs">
       <DependentUpon>FRMCategoria_Registrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMCliente_Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMCliente_Lista.Designer.cs">
+      <DependentUpon>FRMCliente_Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMCliente_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMCliente_Registrar.Designer.cs">
+      <DependentUpon>FRMCliente_Registrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRMFondo_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +149,18 @@
     <Compile Include="FRMPrincipal.Designer.cs">
       <DependentUpon>FRMPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMProducto_Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMProducto_Lista.Designer.cs">
+      <DependentUpon>FRMProducto_Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMProducto_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMProducto_Registrar.Designer.cs">
+      <DependentUpon>FRMProducto_Registrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRMSplash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +188,12 @@
     <EmbeddedResource Include="FRMCategoria_Registrar.resx">
       <DependentUpon>FRMCategoria_Registrar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRMCliente_Lista.resx">
+      <DependentUpon>FRMCliente_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMCliente_Registrar.resx">
+      <DependentUpon>FRMCliente_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRMFondo_1.resx">
       <DependentUpon>FRMFondo_1.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +220,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRMPrincipal.resx">
       <DependentUpon>FRMPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMProducto_Lista.resx">
+      <DependentUpon>FRMProducto_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMProducto_Registrar.resx">
+      <DependentUpon>FRMProducto_Registrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMSplash.resx">
       <DependentUpon>FRMSplash.cs</DependentUpon>
@@ -365,6 +401,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_categoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_proveedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_cliente_guardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_cliente_modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_cliente_reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_producto_nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_producto_modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_producto_reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_codigo_barras.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

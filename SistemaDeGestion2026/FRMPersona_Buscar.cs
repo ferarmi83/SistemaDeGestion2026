@@ -12,6 +12,8 @@ namespace SistemaDeGestion2026
         public aperson persona = new aperson();
         private List<aperson> lista_personas = new List<aperson>();
         public bool seleccionadoOk = false;
+
+        public String condicion = "";
         #endregion
 
         #region Constructor
@@ -25,9 +27,8 @@ namespace SistemaDeGestion2026
         private void ActualizarGrid()
         {
             DTGLista.Rows.Clear();
-            lista_personas.Clear();
-            String soloSinUsuario = "papscodper not in (select papscodper from aperson,aususis where papscodper=fauscodper order by papscodper)";
-            lista_personas = persona.Lista(soloSinUsuario + " and (capsnumcid like '%" + TXTFiltrar.Text + "%' or " +
+            lista_personas.Clear();            
+            lista_personas = persona.Lista(condicion + " and (capsnumcid like '%" + TXTFiltrar.Text + "%' or " +
                                             "capsapepat like '%" + TXTFiltrar.Text + "%' or " +
                                             "capsapemat like '%" + TXTFiltrar.Text + "%' or " +
                                             "capsnomper like '%" + TXTFiltrar.Text + "%') and capsestper=true " +

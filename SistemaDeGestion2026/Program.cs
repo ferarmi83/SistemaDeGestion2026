@@ -13,7 +13,7 @@ namespace SistemaDeGestion2026
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FRMPrincipal());
+            Application.Run(new FRMProducto_Registrar());
         }
     }
 }

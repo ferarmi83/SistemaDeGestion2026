@@ -152,5 +152,16 @@ namespace SistemaDeGestion2026
         {
             
         }
+
+        private void BTNCliente_Click(object sender, EventArgs e)
+        {
+            foreach (Form s in this.MdiChildren)
+            {
+                s.Close();
+            }
+            FRMCliente_Lista a = new FRMCliente_Lista();
+            a.MdiParent = this;
+            a.Show();
+        }
     }
 }
