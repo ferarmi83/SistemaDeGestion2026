@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AForge.Video.DirectShow;
+using CapaRN;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,17 +16,55 @@ namespace SistemaDeGestion2026
     {
         #region Variables
         private bool lectorCBHabilitado = false;
+        public aproduc producto = new aproduc();        
+        private xnumcor correlativo = new xnumcor();
+        public bool modificar = false;
+        public String codProMod = "";
+        public bool actualizar = false;
+
+        //Variables para la camara
+        private FilterInfoCollection CaptureDevice; // list of webcam
+        private VideoCaptureDevice FinalFrame;
+        private bool TieneFoto = false;
         #endregion
 
+        #region Constructor
         public FRMProducto_Registrar()
         {
             InitializeComponent();
         }
+        #endregion
 
-        private void TXTNombres_TextChanged(object sender, EventArgs e)
+        #region Métodos
+
+        private void CargarComboCategorias()
         {
+            List<acatpro> ListaCategorias = new List<acatpro>();
+            acatpro categoria = new acatpro();
+            ListaCategorias = categoria.Lista("cacpestcat = true order by cacpnomcat");
+            CMBCategoria.Items.Clear();
+            CMBCategoria.DisplayMember = "cacpnomcat";
+            CMBCategoria.ValueMember = "pacpcodcat";
+            CMBCategoria.DataSource = ListaCategorias;
+            CMBCategoria.SelectedIndex = -1;
 
         }
+        private void CargarCombo(String campo, ComboBox combo)
+        {
+            List<String> ListaNombresProducto = new List<String>();
+            
+            ListaNombresProducto = producto.Combo(campo);
+            combo.Items.Clear();
+            combo.DisplayMember = campo;            
+            combo.DataSource = ListaNombresProducto;
+            combo.SelectedIndex = -1;
+           
+        }
+
+        #endregion
+
+        #region Eventos
+
 
         private void BTNCodigoDeBarras_Click(object sender, EventArgs e)
         {
@@ -60,6 +100,18 @@ namespace SistemaDeGestion2026
             {
                 LBLCodigoDeBarras.Text += e.KeyChar;
             }
+        }
+
+        #endregion
+
+        private void FRMProducto_Registrar_Load(object sender, EventArgs e)
+        {
+            CargarComboCategorias();
+            CargarCombo("capdnompro", CMBNombreProducto);
+            CargarCombo("capdmarpro", CMBMarca);
+            CargarCombo("capdmatpro", CMBMaterial);
+            CargarCombo("capdcolpro", CMBColor);
+            CargarCombo("capdtalpro", CMBTalla);
         }
     }
 }

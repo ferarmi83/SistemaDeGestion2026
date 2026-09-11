@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRMProducto_Registrar));
             this.GPPanelPrincipal = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.LBLCodigoDeBarras = new DevComponents.DotNetBar.LabelX();
             this.DINPrecioMinimo = new DevComponents.Editors.DoubleInput();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.DINPrecioVenta = new DevComponents.Editors.DoubleInput();
@@ -56,7 +57,9 @@
             this.TXTModelo = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.TXTDescripcion = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.SWBEstado = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.LBLCodigoDeBarras = new DevComponents.DotNetBar.LabelX();
+            this.comboItem1 = new DevComponents.Editors.ComboItem();
+            this.comboItem2 = new DevComponents.Editors.ComboItem();
+            this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.GPPanelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DINPrecioMinimo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DINPrecioVenta)).BeginInit();
@@ -128,6 +131,19 @@
             this.GPPanelPrincipal.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.GPPanelPrincipal.TabIndex = 1;
             this.GPPanelPrincipal.Text = "Persona";
+            // 
+            // LBLCodigoDeBarras
+            // 
+            this.LBLCodigoDeBarras.BackColor = System.Drawing.Color.LightGreen;
+            // 
+            // 
+            // 
+            this.LBLCodigoDeBarras.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.LBLCodigoDeBarras.Location = new System.Drawing.Point(164, 3);
+            this.LBLCodigoDeBarras.Name = "LBLCodigoDeBarras";
+            this.LBLCodigoDeBarras.Size = new System.Drawing.Size(144, 26);
+            this.LBLCodigoDeBarras.TabIndex = 33;
+            this.LBLCodigoDeBarras.Text = "SIN CÓDIGO";
             // 
             // DINPrecioMinimo
             // 
@@ -234,6 +250,10 @@
             this.CMBGenero.ForeColor = System.Drawing.Color.Black;
             this.CMBGenero.FormattingEnabled = true;
             this.CMBGenero.ItemHeight = 17;
+            this.CMBGenero.Items.AddRange(new object[] {
+            this.comboItem1,
+            this.comboItem2,
+            this.comboItem3});
             this.CMBGenero.Location = new System.Drawing.Point(164, 35);
             this.CMBGenero.Name = "CMBGenero";
             this.CMBGenero.Size = new System.Drawing.Size(177, 23);
@@ -528,18 +548,17 @@
             this.SWBEstado.Value = true;
             this.SWBEstado.ValueObject = "Y";
             // 
-            // LBLCodigoDeBarras
+            // comboItem1
             // 
-            this.LBLCodigoDeBarras.BackColor = System.Drawing.Color.LightGreen;
+            this.comboItem1.Text = "HOMBRE";
             // 
+            // comboItem2
             // 
+            this.comboItem2.Text = "MUJER";
             // 
-            this.LBLCodigoDeBarras.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.LBLCodigoDeBarras.Location = new System.Drawing.Point(164, 3);
-            this.LBLCodigoDeBarras.Name = "LBLCodigoDeBarras";
-            this.LBLCodigoDeBarras.Size = new System.Drawing.Size(144, 26);
-            this.LBLCodigoDeBarras.TabIndex = 33;
-            this.LBLCodigoDeBarras.Text = "SIN CÓDIGO";
+            // comboItem3
+            // 
+            this.comboItem3.Text = "UNISEX";
             // 
             // FRMProducto_Registrar
             // 
@@ -552,6 +571,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRMProducto_Registrar";
             this.Text = "FRMProducto_Registrar";
+            this.Load += new System.EventHandler(this.FRMProducto_Registrar_Load);
             this.GPPanelPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DINPrecioMinimo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DINPrecioVenta)).EndInit();
@@ -593,5 +613,8 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.Editors.DoubleInput DINPrecioVenta;
         private DevComponents.DotNetBar.LabelX LBLCodigoDeBarras;
+        private DevComponents.Editors.ComboItem comboItem1;
+        private DevComponents.Editors.ComboItem comboItem2;
+        private DevComponents.Editors.ComboItem comboItem3;
     }
 }

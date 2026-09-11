@@ -1,6 +1,7 @@
 ﻿using AForge.Video;
 using AForge.Video.DirectShow;
 using CapaRN;
+using DevComponents.DotNetBar;
 using DevComponents.DotNetBar.Controls;
 using SistemaDeGestion2026.Properties;
 using System;
@@ -21,6 +22,7 @@ namespace SistemaDeGestion2026
         private FilterInfoCollection CaptureDevice; // list of webcam
         private VideoCaptureDevice FinalFrame;
         private bool TieneFoto = false;
+        
         #endregion
 
         #region Constructor
@@ -36,7 +38,7 @@ namespace SistemaDeGestion2026
         private bool VerificarIntegridad()
         {
             bool respuesta = true;
-
+            
             aperson persona2 = new aperson();
             persona2.capsnumcid = TXTCI.Text;
 
