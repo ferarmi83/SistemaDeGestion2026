@@ -150,7 +150,13 @@ namespace SistemaDeGestion2026
 
         private void BTNProductos_Click(object sender, EventArgs e)
         {
-            
+            foreach (Form s in this.MdiChildren)
+            {
+                s.Close();
+            }
+            FRMProducto_Lista a = new FRMProducto_Lista();
+            a.MdiParent = this;
+            a.Show();
         }
 
         private void BTNCliente_Click(object sender, EventArgs e)

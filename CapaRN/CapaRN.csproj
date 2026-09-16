@@ -49,6 +49,7 @@
     <Compile Include="aproduc.cs" />
     <Compile Include="aprovee.cs" />
     <Compile Include="aususis.cs" />
+    <Compile Include="lproduc.cs" />
     <Compile Include="lususis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="xgeneral.cs" />

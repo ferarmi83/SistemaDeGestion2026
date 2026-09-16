@@ -388,7 +388,7 @@ namespace SistemaDeGestion2026
         {
             try
             {
-                FinalFrame = new VideoCaptureDevice(CaptureDevice[1].MonikerString);// specified web cam and its filter moniker string
+                FinalFrame = new VideoCaptureDevice(CaptureDevice[CaptureDevice.Count - 1].MonikerString);// specified web cam and its filter moniker string
                 FinalFrame.NewFrame += new NewFrameEventHandler(FinalFrame_NewFrame);// click button event is fired, 
                 FinalFrame.Start();
             }

@@ -197,7 +197,7 @@
             this.TXTFiltrar.Location = new System.Drawing.Point(93, 41);
             this.TXTFiltrar.Name = "TXTFiltrar";
             this.TXTFiltrar.PreventEnterBeep = true;
-            this.TXTFiltrar.Size = new System.Drawing.Size(196, 26);
+            this.TXTFiltrar.Size = new System.Drawing.Size(196, 23);
             this.TXTFiltrar.TabIndex = 5;
             this.TXTFiltrar.WatermarkText = "Datos a buscar...";
             this.TXTFiltrar.Enter += new System.EventHandler(this.TXTFiltrar_Enter);
@@ -216,7 +216,7 @@
             this.IINFilas.MinValue = 0;
             this.IINFilas.Name = "IINFilas";
             this.IINFilas.ShowUpDown = true;
-            this.IINFilas.Size = new System.Drawing.Size(80, 26);
+            this.IINFilas.Size = new System.Drawing.Size(80, 23);
             this.IINFilas.TabIndex = 4;
             this.IINFilas.Value = 50;
             // 
@@ -369,34 +369,34 @@
             this.eliminarToolStripMenuItem,
             this.habilitarToolStripMenuItem});
             this.CMSMenu.Name = "CMSMenu";
-            this.CMSMenu.Size = new System.Drawing.Size(146, 76);
+            this.CMSMenu.Size = new System.Drawing.Size(181, 92);
             this.CMSMenu.Opening += new System.ComponentModel.CancelEventHandler(this.CMSMenu_Opening);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarToolStripMenuItem.Text = "&Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eliminarToolStripMenuItem.Text = "&Inhabilitar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // habilitarToolStripMenuItem
             // 
             this.habilitarToolStripMenuItem.Name = "habilitarToolStripMenuItem";
-            this.habilitarToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.habilitarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.habilitarToolStripMenuItem.Text = "&Habilitar";
             this.habilitarToolStripMenuItem.Click += new System.EventHandler(this.habilitarToolStripMenuItem_Click);
             // 
             // FRMPersona_Lista
             // 
             this.AcceptButton = this.EPNFiltrar;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 448);
             this.Controls.Add(this.DTGLista);
