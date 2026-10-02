@@ -32,15 +32,15 @@ namespace SistemaDeGestion2026
         {
             DTGLista.Rows.Clear();
             lista_productos.Clear();
-            lista_productos = producto.Lista("capdmodpro like '%" + TXTFiltrar.Text + "%' or " +
-                                             "capdcodbar like '%" + TXTFiltrar.Text + "%' or " +
-                                             "capdnompro like '%" + TXTFiltrar.Text + "%' or " +
-                                             "capdgenpro like '%" + TXTFiltrar.Text + "%' or " +
-                                             "capdmarpro like '%" + TXTFiltrar.Text + "%' or " +
-                                             "capdcolpro like '%" + TXTFiltrar.Text + "%' or " +
-                                             "capdtalpro like '%" + TXTFiltrar.Text + "%' or " +
-                                             "capddespro like '%" + TXTFiltrar.Text + "%' or " +
-                                             "cacpnomcat like '%" + TXTFiltrar.Text + "%' limit " +
+            lista_productos = producto.Lista("(capdmodpro like '%" + TXTFiltrar.Text + "%' or " +
+                                              "capdcodbar like '%" + TXTFiltrar.Text + "%' or " +
+                                              "capdnompro like '%" + TXTFiltrar.Text + "%' or " +
+                                              "capdgenpro like '%" + TXTFiltrar.Text + "%' or " +
+                                              "capdmarpro like '%" + TXTFiltrar.Text + "%' or " +
+                                              "capdcolpro like '%" + TXTFiltrar.Text + "%' or " +
+                                              "capdtalpro like '%" + TXTFiltrar.Text + "%' or " +
+                                              "capddespro like '%" + TXTFiltrar.Text + "%' or " +
+                                              "cacpnomcat like '%" + TXTFiltrar.Text + "%') limit " +
                                            IINFilas.Value.ToString()
                                            );
             foreach (lproduc a in lista_productos)
@@ -62,7 +62,7 @@ namespace SistemaDeGestion2026
                 DTGLista[2, DTGLista.Rows.Count - 1].Value = a.capdmodpro;
                 DTGLista[3, DTGLista.Rows.Count - 1].Value = a.capdcodbar;
                 DTGLista[4, DTGLista.Rows.Count - 1].Value = a.capdnompro;
-                DTGLista[5, DTGLista.Rows.Count - 1].Value = a.fapdcodcat;
+                DTGLista[5, DTGLista.Rows.Count - 1].Value = a.cacpnomcat;
                 DTGLista[6, DTGLista.Rows.Count - 1].Value = a.capdgenpro;
                 DTGLista[7, DTGLista.Rows.Count - 1].Value = a.capdmarpro;
                 DTGLista[8, DTGLista.Rows.Count - 1].Value = a.capdcolpro;
@@ -87,6 +87,10 @@ namespace SistemaDeGestion2026
         {
             FRMProducto_Registrar a = new FRMProducto_Registrar();
             a.ShowDialog();
+            if (a.actualizar)
+            {
+                ActualizarGrid();
+            }
         }
 
         private void BTNModificar_Click(object sender, EventArgs e)
