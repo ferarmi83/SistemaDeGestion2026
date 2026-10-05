@@ -239,8 +239,10 @@
             // 
             // FRMUsuario_Registrar
             // 
+            this.AcceptButton = this.BTNGrabar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BTNSalir;
             this.ClientSize = new System.Drawing.Size(520, 485);
             this.Controls.Add(this.GPPanelPrincipal);
             this.DoubleBuffered = true;
@@ -248,6 +250,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRMUsuario_Registrar";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRMUsuario_Registrar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRMUsuario_Registrar_FormClosing);

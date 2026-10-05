@@ -56,6 +56,7 @@
             this.RTBAdministracion = new DevComponents.DotNetBar.RibbonTabItem();
             this.RTBInventario = new DevComponents.DotNetBar.RibbonTabItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
+            this.BTNVentas = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.RBPAdministracion.SuspendLayout();
@@ -142,7 +143,8 @@
             this.ribbonBar4.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar4.DragDropSupport = true;
             this.ribbonBar4.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.BTNCliente});
+            this.BTNCliente,
+            this.BTNVentas});
             this.ribbonBar4.Location = new System.Drawing.Point(321, 0);
             this.ribbonBar4.Name = "ribbonBar4";
             this.ribbonBar4.Size = new System.Drawing.Size(159, 122);
@@ -498,11 +500,20 @@
             this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.VisualStudio2012Light;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242))))), System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204))))));
             // 
+            // BTNVentas
+            // 
+            this.BTNVentas.Image = global::SistemaDeGestion2026.Properties.Resources.ic_venta;
+            this.BTNVentas.ImageFixedSize = new System.Drawing.Size(50, 50);
+            this.BTNVentas.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.BTNVentas.Name = "BTNVentas";
+            this.BTNVentas.SubItemsExpandWidth = 14;
+            this.BTNVentas.Text = "&Ventas";
+            // 
             // FRMPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 360);
+            this.ClientSize = new System.Drawing.Size(910, 358);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
             this.Name = "FRMPrincipal";
@@ -547,6 +558,7 @@
         private DevComponents.DotNetBar.ButtonItem BTNProveedores;
         private DevComponents.DotNetBar.RibbonBar ribbonBar4;
         private DevComponents.DotNetBar.ButtonItem BTNCliente;
+        private DevComponents.DotNetBar.ButtonItem BTNVentas;
     }
 }
 

@@ -526,8 +526,10 @@
             this.Controls.Add(this.GPPanelPrincipal);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRMPersona_Registrar";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRMPersona_Registrar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRMPersona_Registrar_FormClosing);

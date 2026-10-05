@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.GPPanelPrincipal = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.TXTCategoriaProductoNombre = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.SWBCategoriaProductoEstadoStock = new DevComponents.DotNetBar.Controls.SwitchButton();
-            this.BLTAyuda = new DevComponents.DotNetBar.BalloonTip();
             this.BTNSalir = new DevComponents.DotNetBar.ButtonX();
             this.BTNLimpiar = new DevComponents.DotNetBar.ButtonX();
             this.BTNGrabar = new DevComponents.DotNetBar.ButtonX();
+            this.TXTCategoriaProductoNombre = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.SWBCategoriaProductoEstadoStock = new DevComponents.DotNetBar.Controls.SwitchButton();
+            this.BLTAyuda = new DevComponents.DotNetBar.BalloonTip();
             this.GPPanelPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,47 +84,6 @@
             this.GPPanelPrincipal.TabIndex = 0;
             this.GPPanelPrincipal.Text = "Categoria";
             // 
-            // TXTCategoriaProductoNombre
-            // 
-            this.TXTCategoriaProductoNombre.BackColor = System.Drawing.Color.White;
-            this.BLTAyuda.SetBalloonCaption(this.TXTCategoriaProductoNombre, "Ayuda");
-            this.BLTAyuda.SetBalloonText(this.TXTCategoriaProductoNombre, "Nombre de la categoria");
-            // 
-            // 
-            // 
-            this.TXTCategoriaProductoNombre.Border.Class = "TextBoxBorder";
-            this.TXTCategoriaProductoNombre.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TXTCategoriaProductoNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TXTCategoriaProductoNombre.DisabledBackColor = System.Drawing.Color.White;
-            this.TXTCategoriaProductoNombre.ForeColor = System.Drawing.Color.Black;
-            this.TXTCategoriaProductoNombre.Location = new System.Drawing.Point(9, 46);
-            this.TXTCategoriaProductoNombre.Name = "TXTCategoriaProductoNombre";
-            this.TXTCategoriaProductoNombre.PreventEnterBeep = true;
-            this.TXTCategoriaProductoNombre.Size = new System.Drawing.Size(352, 26);
-            this.TXTCategoriaProductoNombre.TabIndex = 1;
-            this.TXTCategoriaProductoNombre.WatermarkText = "Nombre de la Categoria";
-            this.TXTCategoriaProductoNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTCategoriaProductoNombre_KeyDown);
-            // 
-            // SWBCategoriaProductoEstadoStock
-            // 
-            // 
-            // 
-            // 
-            this.SWBCategoriaProductoEstadoStock.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SWBCategoriaProductoEstadoStock.Location = new System.Drawing.Point(9, 14);
-            this.SWBCategoriaProductoEstadoStock.Name = "SWBCategoriaProductoEstadoStock";
-            this.SWBCategoriaProductoEstadoStock.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.SWBCategoriaProductoEstadoStock.OffText = "Inhabilitado";
-            this.SWBCategoriaProductoEstadoStock.OffTextColor = System.Drawing.Color.White;
-            this.SWBCategoriaProductoEstadoStock.OnBackColor = System.Drawing.Color.LimeGreen;
-            this.SWBCategoriaProductoEstadoStock.OnText = "Habilitado";
-            this.SWBCategoriaProductoEstadoStock.OnTextColor = System.Drawing.Color.White;
-            this.SWBCategoriaProductoEstadoStock.Size = new System.Drawing.Size(149, 23);
-            this.SWBCategoriaProductoEstadoStock.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.SWBCategoriaProductoEstadoStock.TabIndex = 0;
-            this.SWBCategoriaProductoEstadoStock.Value = true;
-            this.SWBCategoriaProductoEstadoStock.ValueObject = "Y";
-            // 
             // BTNSalir
             // 
             this.BTNSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -168,6 +127,47 @@
             this.BTNGrabar.Text = "&Grabar";
             this.BTNGrabar.Click += new System.EventHandler(this.BTNGrabar_Click);
             // 
+            // TXTCategoriaProductoNombre
+            // 
+            this.TXTCategoriaProductoNombre.BackColor = System.Drawing.Color.White;
+            this.BLTAyuda.SetBalloonCaption(this.TXTCategoriaProductoNombre, "Ayuda");
+            this.BLTAyuda.SetBalloonText(this.TXTCategoriaProductoNombre, "Nombre de la categoria");
+            // 
+            // 
+            // 
+            this.TXTCategoriaProductoNombre.Border.Class = "TextBoxBorder";
+            this.TXTCategoriaProductoNombre.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TXTCategoriaProductoNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TXTCategoriaProductoNombre.DisabledBackColor = System.Drawing.Color.White;
+            this.TXTCategoriaProductoNombre.ForeColor = System.Drawing.Color.Black;
+            this.TXTCategoriaProductoNombre.Location = new System.Drawing.Point(9, 46);
+            this.TXTCategoriaProductoNombre.Name = "TXTCategoriaProductoNombre";
+            this.TXTCategoriaProductoNombre.PreventEnterBeep = true;
+            this.TXTCategoriaProductoNombre.Size = new System.Drawing.Size(352, 26);
+            this.TXTCategoriaProductoNombre.TabIndex = 1;
+            this.TXTCategoriaProductoNombre.WatermarkText = "Nombre de la Categoria";
+            this.TXTCategoriaProductoNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TXTCategoriaProductoNombre_KeyDown);
+            // 
+            // SWBCategoriaProductoEstadoStock
+            // 
+            // 
+            // 
+            // 
+            this.SWBCategoriaProductoEstadoStock.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SWBCategoriaProductoEstadoStock.Location = new System.Drawing.Point(9, 14);
+            this.SWBCategoriaProductoEstadoStock.Name = "SWBCategoriaProductoEstadoStock";
+            this.SWBCategoriaProductoEstadoStock.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.SWBCategoriaProductoEstadoStock.OffText = "Inhabilitado";
+            this.SWBCategoriaProductoEstadoStock.OffTextColor = System.Drawing.Color.White;
+            this.SWBCategoriaProductoEstadoStock.OnBackColor = System.Drawing.Color.LimeGreen;
+            this.SWBCategoriaProductoEstadoStock.OnText = "Habilitado";
+            this.SWBCategoriaProductoEstadoStock.OnTextColor = System.Drawing.Color.White;
+            this.SWBCategoriaProductoEstadoStock.Size = new System.Drawing.Size(149, 23);
+            this.SWBCategoriaProductoEstadoStock.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.SWBCategoriaProductoEstadoStock.TabIndex = 0;
+            this.SWBCategoriaProductoEstadoStock.Value = true;
+            this.SWBCategoriaProductoEstadoStock.ValueObject = "Y";
+            // 
             // FRMCategoria_Registrar
             // 
             this.AcceptButton = this.BTNGrabar;
@@ -178,8 +178,10 @@
             this.Controls.Add(this.GPPanelPrincipal);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRMCategoria_Registrar";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRMCategoria_Registrar";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FRMCategoria_Registrar_FormClosing);

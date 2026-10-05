@@ -114,7 +114,48 @@ namespace CapaRN
                     return false;
                 }
             }
-            public bool VerificarExistencia()
+
+        public bool ObtenerDatosNIT()
+        {
+            this.Conexion.Conectar();
+            string sql = "select " +
+                                 "caclestcli," +
+                                 "caclrazcli," +
+                                 "paclcodcli," +
+                                 "cacldircli," +
+                                 "cacltelcli," +
+                                 "faclcodper," +
+                                 "caclnitcli " +
+                         "from aclient " +
+                         "where " +
+                                "caclnitcli = @caclnitcli and caclestcli = true";
+
+            this.Conexion.PrepararComando(sql);
+
+            this.Conexion.AsignarParametroCadena("@caclnitcli", this._caclnitcli);
+
+            DbDataReader ResultadoConsulta = Conexion.EjecutarConsulta();
+
+            if (ResultadoConsulta.Read())
+            {
+                this._caclestcli = ResultadoConsulta.GetBoolean(0);
+                this._caclrazcli = ResultadoConsulta.GetString(1);
+                this._paclcodcli = ResultadoConsulta.GetString(2);
+                this._cacldircli = ResultadoConsulta.GetString(3);
+                this._cacltelcli = ResultadoConsulta.GetString(4);
+                this._faclcodper = ResultadoConsulta.GetString(5);
+                this._caclnitcli = ResultadoConsulta.GetString(6);
+                this.Conexion.Desconectar();
+
+                return true;
+            }
+            else
+            {
+                this.Conexion.Desconectar();
+                return false;
+            }
+        }
+        public bool VerificarExistencia()
             { 
                 this.Conexion.Conectar(); 
 			    string sql = "select " + 

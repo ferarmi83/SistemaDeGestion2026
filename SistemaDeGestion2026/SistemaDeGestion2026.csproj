@@ -83,6 +83,12 @@
     <Compile Include="FRMCategoria_Registrar.Designer.cs">
       <DependentUpon>FRMCategoria_Registrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMCliente_Buscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMCliente_Buscar.Designer.cs">
+      <DependentUpon>FRMCliente_Buscar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FRMCliente_Lista.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,18 @@
     <Compile Include="FRMUsuario_Registrar.Designer.cs">
       <DependentUpon>FRMUsuario_Registrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRMVenta_Lista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMVenta_Lista.Designer.cs">
+      <DependentUpon>FRMVenta_Lista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRMVenta_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMVenta_Registrar.Designer.cs">
+      <DependentUpon>FRMVenta_Registrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="MetodosGenerales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -187,6 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRMCategoria_Registrar.resx">
       <DependentUpon>FRMCategoria_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMCliente_Buscar.resx">
+      <DependentUpon>FRMCliente_Buscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FRMCliente_Lista.resx">
       <DependentUpon>FRMCliente_Lista.cs</DependentUpon>
@@ -235,6 +256,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRMUsuario_Registrar.resx">
       <DependentUpon>FRMUsuario_Registrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMVenta_Lista.resx">
+      <DependentUpon>FRMVenta_Lista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMVenta_Registrar.resx">
+      <DependentUpon>FRMVenta_Registrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -428,6 +455,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_codigo_barras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_venta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_venta_nuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_venta_modificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_venta_reporte.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

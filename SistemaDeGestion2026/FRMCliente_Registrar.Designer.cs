@@ -263,14 +263,19 @@
             // 
             // FRMCliente_Registrar
             // 
+            this.AcceptButton = this.BTNGrabar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BTNSalir;
             this.ClientSize = new System.Drawing.Size(342, 247);
             this.Controls.Add(this.GP_Panel_Usuario);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRMCliente_Registrar";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRMCliente_Registrar";
             this.Load += new System.EventHandler(this.FRMCliente_Registrar_Load);
             this.GP_Panel_Usuario.ResumeLayout(false);

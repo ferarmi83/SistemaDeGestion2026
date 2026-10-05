@@ -99,6 +99,7 @@ namespace SistemaDeGestion2026
 
         private void FRMCliente_Lista_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             ActualizarGrid();
         }
         #endregion
