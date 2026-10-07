@@ -16,6 +16,8 @@ namespace SistemaDeGestion2026
         #region Variables
             private aclient cliente=new aclient();
             private bool clienteok=false;
+            private bool lectorCBHabilitado = false;
+            public aproduc producto = new aproduc();
         #endregion
         public FRMVenta_Registrar()
         {
@@ -53,6 +55,45 @@ namespace SistemaDeGestion2026
                 this.clienteok = false;
                 TXTNITCliente.Text = "";
                 TXTNombreCliente.Text = "Nombre del cliente";
+            }
+        }
+
+        private void BTNCodigoDeBarras_Click(object sender, EventArgs e)
+        {
+            if (!lectorCBHabilitado)
+            {
+                lectorCBHabilitado = true;
+                LBLCodigoDeBarras.Text = "LECTOR ACTIVO";
+                LBLCodigoDeBarras.BackColor = Color.PaleGreen;
+            }
+            else
+            {
+                if (LBLCodigoDeBarras.Text == "LECTOR ACTIVO")
+                {
+                    LBLCodigoDeBarras.Text = "SIN CÓDIGO";
+                    LBLCodigoDeBarras.BackColor = Color.Salmon;
+                }
+                else
+                {
+                    producto.capdcodbar = LBLCodigoDeBarras.Text;
+                    if (producto.ObtenerDatosCodigo(false, producto.capdcodbar))
+                    { 
+                        MessageBox.Show("Producto encontrado " + producto.capddespro);
+                    }
+                }
+                lectorCBHabilitado = false;                
+            }
+        }
+
+        private void BTNCodigoDeBarras_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (LBLCodigoDeBarras.Text == "LECTOR ACTIVO")
+            {
+                LBLCodigoDeBarras.Text = "" + e.KeyChar;
+            }
+            else
+            {
+                LBLCodigoDeBarras.Text += e.KeyChar;
             }
         }
     }
