@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DTGLista = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
@@ -46,11 +46,11 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EPNFiltrar = new DevComponents.DotNetBar.ExpandablePanel();
-            this.TXTFiltrar = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.IINFilas = new DevComponents.Editors.IntegerInput();
             this.BTNAceptar = new DevComponents.DotNetBar.ButtonX();
             this.BTNAgregarPersona = new DevComponents.DotNetBar.ButtonX();
             this.BTNFiltrar = new DevComponents.DotNetBar.ButtonX();
+            this.TXTFiltrar = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.IINFilas = new DevComponents.Editors.IntegerInput();
             ((System.ComponentModel.ISupportInitialize)(this.DTGLista)).BeginInit();
             this.EPNFiltrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IINFilas)).BeginInit();
@@ -61,14 +61,14 @@
             this.DTGLista.AllowUserToAddRows = false;
             this.DTGLista.AllowUserToDeleteRows = false;
             this.DTGLista.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DTGLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DTGLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DTGLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DTGLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -80,14 +80,14 @@
             this.Column7,
             this.Column8,
             this.Column9});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DTGLista.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.PaleGoldenrod;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DTGLista.DefaultCellStyle = dataGridViewCellStyle6;
             this.DTGLista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DTGLista.EnableHeadersVisualStyles = false;
             this.DTGLista.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(157)))));
@@ -95,26 +95,26 @@
             this.DTGLista.MultiSelect = false;
             this.DTGLista.Name = "DTGLista";
             this.DTGLista.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DTGLista.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DTGLista.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DTGLista.RowHeadersWidth = 51;
             this.DTGLista.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.DTGLista.RowTemplate.Height = 24;
             this.DTGLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DTGLista.Size = new System.Drawing.Size(712, 312);
+            this.DTGLista.Size = new System.Drawing.Size(931, 312);
             this.DTGLista.TabIndex = 13;
             this.DTGLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTGLista_CellDoubleClick);
             // 
             // Column1
             // 
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column1.HeaderText = "Codigo";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
@@ -127,8 +127,8 @@
             this.Column2.Checked = true;
             this.Column2.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.Column2.CheckValue = "N";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column2.HeaderText = "Est.";
             this.Column2.MinimumWidth = 60;
             this.Column2.Name = "Column2";
@@ -169,9 +169,9 @@
             // 
             // Column7
             // 
-            dataGridViewCellStyle11.Format = "d";
-            dataGridViewCellStyle11.NullValue = null;
-            this.Column7.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Format = "d";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Column7.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column7.HeaderText = "Fec. Nac. ";
             this.Column7.MinimumWidth = 110;
             this.Column7.Name = "Column7";
@@ -180,8 +180,8 @@
             // 
             // Column8
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column8.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column8.DefaultCellStyle = dataGridViewCellStyle5;
             this.Column8.HeaderText = "Sexo";
             this.Column8.MinimumWidth = 60;
             this.Column8.Name = "Column8";
@@ -210,7 +210,7 @@
             this.EPNFiltrar.HideControlsWhenCollapsed = true;
             this.EPNFiltrar.Location = new System.Drawing.Point(0, 0);
             this.EPNFiltrar.Name = "EPNFiltrar";
-            this.EPNFiltrar.Size = new System.Drawing.Size(712, 73);
+            this.EPNFiltrar.Size = new System.Drawing.Size(931, 73);
             this.EPNFiltrar.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.EPNFiltrar.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.EPNFiltrar.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -224,43 +224,6 @@
             this.EPNFiltrar.TitleStyle.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.EPNFiltrar.TitleStyle.GradientAngle = 90;
             this.EPNFiltrar.TitleText = "Filtrar";
-            // 
-            // TXTFiltrar
-            // 
-            this.TXTFiltrar.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.TXTFiltrar.Border.Class = "TextBoxBorder";
-            this.TXTFiltrar.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.TXTFiltrar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TXTFiltrar.DisabledBackColor = System.Drawing.Color.White;
-            this.TXTFiltrar.ForeColor = System.Drawing.Color.Black;
-            this.TXTFiltrar.Location = new System.Drawing.Point(93, 41);
-            this.TXTFiltrar.Name = "TXTFiltrar";
-            this.TXTFiltrar.PreventEnterBeep = true;
-            this.TXTFiltrar.Size = new System.Drawing.Size(196, 26);
-            this.TXTFiltrar.TabIndex = 5;
-            this.TXTFiltrar.WatermarkText = "Datos a buscar...";
-            this.TXTFiltrar.Enter += new System.EventHandler(this.TXTFiltrar_Enter);
-            // 
-            // IINFilas
-            // 
-            // 
-            // 
-            // 
-            this.IINFilas.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.IINFilas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.IINFilas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.IINFilas.Increment = 10;
-            this.IINFilas.Location = new System.Drawing.Point(6, 41);
-            this.IINFilas.MaxValue = 1000;
-            this.IINFilas.MinValue = 0;
-            this.IINFilas.Name = "IINFilas";
-            this.IINFilas.ShowUpDown = true;
-            this.IINFilas.Size = new System.Drawing.Size(80, 26);
-            this.IINFilas.TabIndex = 4;
-            this.IINFilas.Value = 50;
             // 
             // BTNAceptar
             // 
@@ -303,11 +266,48 @@
             this.BTNFiltrar.TabIndex = 6;
             this.BTNFiltrar.Click += new System.EventHandler(this.BTNFiltrar_Click);
             // 
+            // TXTFiltrar
+            // 
+            this.TXTFiltrar.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.TXTFiltrar.Border.Class = "TextBoxBorder";
+            this.TXTFiltrar.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TXTFiltrar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TXTFiltrar.DisabledBackColor = System.Drawing.Color.White;
+            this.TXTFiltrar.ForeColor = System.Drawing.Color.Black;
+            this.TXTFiltrar.Location = new System.Drawing.Point(93, 41);
+            this.TXTFiltrar.Name = "TXTFiltrar";
+            this.TXTFiltrar.PreventEnterBeep = true;
+            this.TXTFiltrar.Size = new System.Drawing.Size(196, 26);
+            this.TXTFiltrar.TabIndex = 5;
+            this.TXTFiltrar.WatermarkText = "Datos a buscar...";
+            this.TXTFiltrar.Enter += new System.EventHandler(this.TXTFiltrar_Enter);
+            // 
+            // IINFilas
+            // 
+            // 
+            // 
+            // 
+            this.IINFilas.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.IINFilas.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.IINFilas.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.IINFilas.Increment = 10;
+            this.IINFilas.Location = new System.Drawing.Point(6, 41);
+            this.IINFilas.MaxValue = 1000;
+            this.IINFilas.MinValue = 0;
+            this.IINFilas.Name = "IINFilas";
+            this.IINFilas.ShowUpDown = true;
+            this.IINFilas.Size = new System.Drawing.Size(80, 26);
+            this.IINFilas.TabIndex = 4;
+            this.IINFilas.Value = 50;
+            // 
             // FRMPersona_Buscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 385);
+            this.ClientSize = new System.Drawing.Size(931, 385);
             this.Controls.Add(this.DTGLista);
             this.Controls.Add(this.EPNFiltrar);
             this.DoubleBuffered = true;

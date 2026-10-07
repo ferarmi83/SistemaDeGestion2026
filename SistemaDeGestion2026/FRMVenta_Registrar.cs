@@ -32,8 +32,27 @@ namespace SistemaDeGestion2026
             }
             else
             { 
-                TXTNombreCliente.Text = "";
+                TXTNombreCliente.Text = "Nombre del cliente";
                 clienteok = false;
+            }
+        }
+
+        private void BTNBuscarUsuario_Click(object sender, EventArgs e)
+        {
+            FRMCliente_Buscar a = new FRMCliente_Buscar();
+            a.ShowDialog();
+            if (a.seleccionadoOk)
+            {
+                this.cliente = a.cliente;
+                this.clienteok = true;
+                TXTNITCliente.Text = cliente.caclnitcli;
+                TXTNombreCliente.Text = cliente.caclrazcli;
+            }
+            else
+            {
+                this.clienteok = false;
+                TXTNITCliente.Text = "";
+                TXTNombreCliente.Text = "Nombre del cliente";
             }
         }
     }

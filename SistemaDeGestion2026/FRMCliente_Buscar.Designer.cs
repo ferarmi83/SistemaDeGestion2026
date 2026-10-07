@@ -89,6 +89,7 @@
             this.BTNAceptar.Size = new System.Drawing.Size(27, 26);
             this.BTNAceptar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.BTNAceptar.TabIndex = 17;
+            this.BTNAceptar.Click += new System.EventHandler(this.BTNAceptar_Click);
             // 
             // BTNAgregarPersona
             // 
@@ -102,6 +103,7 @@
             this.BTNAgregarPersona.Size = new System.Drawing.Size(27, 26);
             this.BTNAgregarPersona.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.BTNAgregarPersona.TabIndex = 16;
+            this.BTNAgregarPersona.Click += new System.EventHandler(this.BTNAgregarPersona_Click);
             // 
             // BTNFiltrar
             // 
@@ -114,6 +116,7 @@
             this.BTNFiltrar.Size = new System.Drawing.Size(27, 26);
             this.BTNFiltrar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.BTNFiltrar.TabIndex = 6;
+            this.BTNFiltrar.Click += new System.EventHandler(this.BTNFiltrar_Click);
             // 
             // TXTFiltrar
             // 
@@ -132,6 +135,7 @@
             this.TXTFiltrar.Size = new System.Drawing.Size(196, 26);
             this.TXTFiltrar.TabIndex = 5;
             this.TXTFiltrar.WatermarkText = "Datos a buscar...";
+            this.TXTFiltrar.Enter += new System.EventHandler(this.TXTFiltrar_Enter);
             // 
             // IINFilas
             // 
@@ -209,6 +213,7 @@
             this.DTGLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DTGLista.Size = new System.Drawing.Size(896, 331);
             this.DTGLista.TabIndex = 56;
+            this.DTGLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DTGLista_CellDoubleClick);
             // 
             // Column1
             // 
@@ -233,6 +238,7 @@
             this.nit.MinimumWidth = 100;
             this.nit.Name = "nit";
             this.nit.ReadOnly = true;
+            this.nit.Width = 125;
             // 
             // Column4
             // 
@@ -260,11 +266,12 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FRMCliente_Buscar";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRMCliente_Buscar";
+            this.Load += new System.EventHandler(this.FRMCliente_Buscar_Load);
             this.EPNFiltrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.IINFilas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DTGLista)).EndInit();

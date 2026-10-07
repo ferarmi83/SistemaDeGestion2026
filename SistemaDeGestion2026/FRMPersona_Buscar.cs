@@ -87,7 +87,6 @@ namespace SistemaDeGestion2026
         {
             TXTFiltrar.SelectAll();
         }
-        #endregion
 
         private void BTNAgregarPersona_Click(object sender, EventArgs e)
         {
@@ -124,5 +123,8 @@ namespace SistemaDeGestion2026
                 }
             }
         }
+        #endregion
+
+
     }
 }
