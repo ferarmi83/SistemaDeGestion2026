@@ -18,12 +18,17 @@ namespace SistemaDeGestion2026
             private bool clienteok=false;
             private bool lectorCBHabilitado = false;
             public aproduc producto = new aproduc();
+            private List<liteven> listaItems = new List<liteven>();
         #endregion
+
+        #region Constructor
         public FRMVenta_Registrar()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Eventos
         private void TXTNITCliente_Leave(object sender, EventArgs e)
         {
             cliente.caclnitcli = TXTNITCliente.Text;
@@ -70,7 +75,7 @@ namespace SistemaDeGestion2026
             {
                 if (LBLCodigoDeBarras.Text == "LECTOR ACTIVO")
                 {
-                    LBLCodigoDeBarras.Text = "SIN CÓDIGO";
+                    LBLCodigoDeBarras.Text = "LECTOR INACTIVO";
                     LBLCodigoDeBarras.BackColor = Color.Salmon;
                 }
                 else
@@ -78,7 +83,9 @@ namespace SistemaDeGestion2026
                     producto.capdcodbar = LBLCodigoDeBarras.Text;
                     if (producto.ObtenerDatosCodigo(false, producto.capdcodbar))
                     { 
-                        MessageBox.Show("Producto encontrado " + producto.capddespro);
+                        AgregarProductoALista(producto);
+                        LBLCodigoDeBarras.Text = "LECTOR ACTIVO";
+                        LBLCodigoDeBarras.BackColor = Color.PaleGreen;
                     }
                 }
                 lectorCBHabilitado = false;                
@@ -96,5 +103,46 @@ namespace SistemaDeGestion2026
                 LBLCodigoDeBarras.Text += e.KeyChar;
             }
         }
+
+        #endregion
+
+        #region Metodos
+
+        private void ActualizarGridItems()
+        {
+            DTGLista.Rows.Clear();
+            foreach (liteven item in listaItems)
+            {
+                DTGLista.Rows.Add();
+
+                DTGLista[0, DTGLista.Rows.Count - 1].Value = item.faivcodpro;
+                DTGLista[1, DTGLista.Rows.Count - 1].Value = item.capdmodpro;
+                DTGLista[2, DTGLista.Rows.Count - 1].Value = item.capdcodbar;
+                DTGLista[3, DTGLista.Rows.Count - 1].Value = item.capdnompro;
+                DTGLista[4, DTGLista.Rows.Count - 1].Value = item.capdtalpro;
+                DTGLista[5, DTGLista.Rows.Count - 1].Value = item.capddespro;
+                DTGLista[6, DTGLista.Rows.Count - 1].Value = item.caivcanite;
+                DTGLista[7, DTGLista.Rows.Count - 1].Value = item.caivpreuni;
+                DTGLista[8, DTGLista.Rows.Count - 1].Value = item.caivsubtot;
+            }
+        }
+
+        private void AgregarProductoALista(aproduc pro)
+        {
+            liteven item = new liteven();
+            item.faivcodpro = pro.papdcodpro;
+            item.capdmodpro = pro.capdmodpro;
+            item.capdcodbar = pro.capdcodbar;
+            item.capdnompro = pro.capdnompro;
+            item.capdtalpro = pro.capdtalpro;
+            item.capddespro = pro.capddespro;
+            item.caivcanite = 1; // Cantidad por defecto
+            item.caivpreuni = pro.capdpreven; // Precio por defecto
+            item.caivsubtot = item.caivcanite * item.caivpreuni;
+            item.caivestite = true; // Estado activo            
+            listaItems.Add(item);
+            ActualizarGridItems();
+        }
+        #endregion
     }
 }
