@@ -468,5 +468,11 @@
   <ItemGroup>
     <None Include="Resources\ic_venta_reporte.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_producto_limpiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_producto_actualizar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

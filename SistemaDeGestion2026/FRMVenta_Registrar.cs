@@ -1,4 +1,5 @@
 ﻿using CapaRN;
+using SistemaDeGestion2026.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,9 @@ namespace SistemaDeGestion2026
             private bool clienteok=false;
             private bool lectorCBHabilitado = false;
             public aproduc producto = new aproduc();
-            private List<liteven> listaItems = new List<liteven>();
+            private liteven itemModificar = new liteven();
+            private bool modificarItem = false;
+        private List<liteven> listaItems = new List<liteven>();
         #endregion
 
         #region Constructor
@@ -173,6 +176,73 @@ namespace SistemaDeGestion2026
             lectorCBHabilitado = false;
             LBLCodigoDeBarras.Text = "LECTOR INACTIVO";
             LBLCodigoDeBarras.BackColor = Color.LightSalmon;
+        }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (DTGLista.SelectedRows.Count > 0)
+            {
+                if (MessageBox.Show("¿Está seguro de que desea eliminar el item seleccionado?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    EliminarItem(DTGLista[0, DTGLista.SelectedRows[0].Index].Value.ToString());
+                }
+            }
+        }
+
+        private void EliminarItem(string CodPro)
+        {
+            listaItems.RemoveAll(x => x.faivcodpro == CodPro);
+            ActualizarGridItems();
+        }        
+
+        private void DTGLista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            itemModificar = listaItems.Find(x => x.faivcodpro == DTGLista[0, e.RowIndex].Value.ToString());
+            modificarItem = true;
+            if (itemModificar != null)
+            {
+                TXTDescripción.Text = itemModificar.capddespro;
+                IINCantidad.Value = itemModificar.caivcanite;
+                DINPrecio.Value = (Double)itemModificar.caivpreuni;
+                producto.papdcodpro = itemModificar.faivcodpro;
+                if (producto.ObtenerDatos())
+                {
+                    if (producto.capdfotpro == "")
+                    {
+                     
+                        PCBFotografia.Image = Resources.NoImagen;
+                    }
+                    else
+                    {                 
+                        PCBFotografia.Image = MetodosGenerales.ConvertBase64StringToImage(producto.capdfotpro);
+                    }
+                }                
+            }
+        }
+
+        private void BTNModificarProducto_Click(object sender, EventArgs e)
+        {
+            if (modificarItem)
+            {                
+                itemModificar.caivcanite = (int)IINCantidad.Value;
+                itemModificar.caivpreuni = (Decimal)DINPrecio.Value;
+                itemModificar.caivsubtot = itemModificar.caivcanite * itemModificar.caivpreuni;
+                ActualizarGridItems();
+                modificarItem = false;
+                TXTDescripción.Text = "Descripción del producto";
+                IINCantidad.Value = 0;
+                DINPrecio.Value = 0;
+                PCBFotografia.Image = Resources.NoImagen;
+            }
+        }
+
+        private void LimpiarProducto_Click(object sender, EventArgs e)
+        {
+            modificarItem = false;
+            TXTDescripción.Text = "Descripción del producto";
+            IINCantidad.Value = 0;
+            DINPrecio.Value = 0;
+            PCBFotografia.Image = Resources.NoImagen;
         }
     }
 }
