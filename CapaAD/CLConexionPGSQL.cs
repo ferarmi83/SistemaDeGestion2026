@@ -17,6 +17,11 @@ namespace CapaAD
         private NpgsqlConnection Conexion;
         private NpgsqlCommand Comando;
 
+        public String GetComandoSQL()
+        {
+            return this.Comando.CommandText;
+        }
+
         /// <summary>
         /// Crea una instancia de la clase CLConexionPGSQL con parametros de conexión
         /// </summary>
