@@ -159,6 +159,7 @@ namespace SistemaDeGestion2026
                 item.capddespro = pro.capddespro;
                 item.caivcanite = 1; // Cantidad por defecto
                 item.caivpreuni = pro.capdpreven; // Precio por defecto
+                item.capdstopro = pro.capdstopro; // Stock por defecto
                 item.caivsubtot = item.caivcanite * item.caivpreuni;
                 item.caivestite = true; // Estado activo            
                 listaItems.Add(item);
@@ -256,6 +257,21 @@ namespace SistemaDeGestion2026
 
         private void BTNGrabar_Click(object sender, EventArgs e)
         {
+            List<aproduc> listaProductos = new List<aproduc>();
+            listaProductos = listaItems.Select(x => new aproduc
+            {
+                papdcodpro = x.faivcodpro,
+                capdmodpro = x.capdmodpro,
+                capdcodbar = x.capdcodbar,
+                capdnompro = x.capdnompro,
+                capdtalpro = x.capdtalpro,
+                capddespro = x.capddespro,
+                capdstopro = x.capdstopro-x.caivcanite,
+                capdpreven = x.caivpreuni
+            }).ToList();
+            
+
+
             if (Verificar_Integridad())
             {
                 venta=new avenpro();
@@ -291,7 +307,7 @@ namespace SistemaDeGestion2026
                     
                 }
 
-                if (venta.Grabar() && item.Grabar(listaItems))
+                if (venta.Grabar() && item.Grabar(listaItems) && producto.ActualizarStock(listaProductos))
                 {
                     MessageBox.Show("Venta guardada correctamente!!",
                                     "Mensaje",
