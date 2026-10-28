@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace SistemaDeGestion2026
 {
@@ -314,6 +315,10 @@ namespace SistemaDeGestion2026
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                     //LimpiarCasillas();
+                    if (PDGDialogo.ShowDialog() == DialogResult.OK)
+                    {
+                        PRDRecibo.Print();
+                    }                    
                     this.actualizar = true;
                     //this.FormClosing -= FRMVenta_Registrar_FormClosing;                    
                     this.Close();
@@ -331,6 +336,13 @@ namespace SistemaDeGestion2026
         private bool Verificar_Integridad()
         {
             return true;
+        }
+
+        private void PRDRecibo_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("RECIBO DE VENTA", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new PointF(100, 100));
+            e.Graphics.DrawString("FECHA:" + venta.cavpfechor.ToString("dd/MM/yyyy HH:mm:ss"), new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new PointF(100, 120));
+            e.Graphics.DrawLine(Pens.Black, new Point(90, 90), new Point(390, 90));            
         }
     }
 }
