@@ -255,7 +255,7 @@
             this.DTGLista.DefaultCellStyle = dataGridViewCellStyle6;
             this.DTGLista.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DTGLista.EnableHeadersVisualStyles = false;
-            this.DTGLista.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(157)))));
+            this.DTGLista.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.DTGLista.Location = new System.Drawing.Point(94, 73);
             this.DTGLista.MultiSelect = false;
             this.DTGLista.Name = "DTGLista";
@@ -369,27 +369,27 @@
             this.eliminarToolStripMenuItem,
             this.habilitarToolStripMenuItem});
             this.CMSMenu.Name = "CMSMenu";
-            this.CMSMenu.Size = new System.Drawing.Size(211, 104);
+            this.CMSMenu.Size = new System.Drawing.Size(146, 76);
             this.CMSMenu.Opening += new System.ComponentModel.CancelEventHandler(this.CMSMenu_Opening);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
             this.modificarToolStripMenuItem.Text = "&Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
             this.eliminarToolStripMenuItem.Text = "&Inhabilitar";
             this.eliminarToolStripMenuItem.Click += new System.EventHandler(this.eliminarToolStripMenuItem_Click);
             // 
             // habilitarToolStripMenuItem
             // 
             this.habilitarToolStripMenuItem.Name = "habilitarToolStripMenuItem";
-            this.habilitarToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.habilitarToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
             this.habilitarToolStripMenuItem.Text = "&Habilitar";
             this.habilitarToolStripMenuItem.Click += new System.EventHandler(this.habilitarToolStripMenuItem_Click);
             // 

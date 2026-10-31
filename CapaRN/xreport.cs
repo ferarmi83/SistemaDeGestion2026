@@ -216,6 +216,25 @@ namespace CapaRN
                 }
 
                 //Contenido del Reporte - Contenido de las Columnas
+
+                Documento.Add(Tabla);
+
+                //5to. PASO: Cerrar el Documento
+                Documento.Close();
+
+                //MOSTRAR MENSAJE
+
+                // iniciamos la instancia de la clase process
+                System.Diagnostics.Process proc = new System.Diagnostics.Process();
+
+                // nombre del archivo a abrir
+                proc.StartInfo.FileName = Guardar.FileName;
+
+                // arrancamos el proceso
+                proc.Start();
+
+                // liberamos recursos
+                proc.Close();   // atención: close no termina el proceso
             }
         }
         #endregion
