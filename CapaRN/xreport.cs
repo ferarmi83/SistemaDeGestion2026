@@ -293,7 +293,7 @@ namespace CapaRN
             }
         }
 
-        public void GenerarReporte(int columnas, float[] anchoColumnas, List<string> titulosColumnas, List<lproduc> Lista)
+        /*public void GenerarReporte(int columnas, float[] anchoColumnas, List<string> titulosColumnas, List<lproduc> Lista)
         {
             SaveFileDialog Guardar = new SaveFileDialog();
             Guardar.Title = "Nombre del archivo a guardar";
@@ -519,7 +519,7 @@ namespace CapaRN
                 // liberamos recursos
                 proc.Close();   // atención: close no termina el proceso
             }
-        }
+        }*/
         #endregion
     }
 }
